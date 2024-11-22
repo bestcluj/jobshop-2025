@@ -1,0 +1,23 @@
+footer {
+  width: 100%;
+  height: fit-content;
+  background-color: green;
+  background-image: none;
+  position: absolute;
+  bottom: 0;
+}
+
+.contact-info {
+  width: 80%;
+  height: fit-content;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 30px;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
