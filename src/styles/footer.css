@@ -3,8 +3,8 @@ footer {
   height: fit-content;
   background-color: green;
   background-image: none;
-  position: absolute;
-  bottom: 0;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 .contact-info {
