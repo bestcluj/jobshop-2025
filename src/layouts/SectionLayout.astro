@@ -1,0 +1,11 @@
+---
+import "../styles/section.css"
+
+const {className} = Astro.props
+---
+
+<section class=`${className} section`>
+
+    <slot/>
+
+</section>
