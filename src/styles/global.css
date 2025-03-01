@@ -3,8 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Inter;
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 400;
 }
 
 html {
@@ -47,7 +46,7 @@ html {
 }
 .main-page-catchprase h1 {
   color: white;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .catch-phrase {
