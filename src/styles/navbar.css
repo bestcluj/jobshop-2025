@@ -6,8 +6,9 @@
 nav {
   height: 80px;
   width: 100%;
-  background-color: yellow;
-  z-index: 1;
+  background-color: #333333;
+  z-index: 2;
+  color: white;
   position: sticky;
   top: 0px;
   display: flex;

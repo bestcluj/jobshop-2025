@@ -1,10 +1,49 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SectionLayout from "../layouts/SectionLayout.astro";
 ---
 
 <BaseLayout>
 
-	<SectionLayout></SectionLayout>
+	<section class="main-page-banner section">
+
+		<img src="/design_elements/poza_principala.svg" alt="main-page-banner">
+
+	</section>
+	
+	<section class="main-page-catchprase section">
+
+		<h1 class="center-text-x"> BT ARENA | 31 march - 1 april </h1>
+
+		<div class="catch-phrase center-x center-content-y">
+
+			<p> redefine success. shape your future. </p>
+			<a href="#descriere-js"> Learn more </a>
+			
+		</div>
+
+	</section>
+
+	<section class="main-page-video section">
+
+		<img src="/design_elements/bara_video.svg" alt="design element">
+		<video src=""></video>
+
+	</section>
+
+	<section class="main-page-js-description section grid-layout center-content-y" id="descriere-js">
+
+		<img src="/design_elements/jobshop_prezentare_windows.svg" alt="JobShop® logo" class="js-logo">
+
+		<p>
+			JobShop® se reîntoarce și anul acesta cu cea de-a 31-a ediție, remarcându-se anual în comunitatea studenților clujeni.
+			Timp de două zile, participanții au ocazia să interacționeze cu reprezentanții unor companii de top în cadrul
+			standurilor de prezentare. În plus, aceștia au acces la workshop-uri interactive susținute de companiile
+			partenere, unde își pot îmbunătăți abilitățile și cunoștințele practice în domeniul de interes. Această experiență
+			reprezintă oportunitatea ideală de networking și explorare a opțiunilor de carieră, într-un mediu dinamic și stimulant.
+		</p>
+
+		<img src="/design_elements/fundal_prezentare.svg" alt="design element" class="force-right test">
+
+	</section>
 
 </BaseLayout>

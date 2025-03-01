@@ -1,4 +1,7 @@
 $site-width: 70%
+$catchphrase-section-bg-color: #9DAAD3
+$catchphrase-bg-color: #333333
+$catchphrase-button-color: #FFFFFF
 
 *
     padding: 0
@@ -8,3 +11,127 @@ $site-width: 70%
 html
     width: $site-width
     margin: 0 auto
+
+.section
+    height: fit-content
+    width: 100%
+    min-height: 100px
+
+    margin: 0 auto
+
+.force-right
+    position: absolute
+    right: 0
+
+.center-x
+    margin: 0 auto
+
+.center-text-x
+    text-align: center
+
+.center-content-y
+    display: flex
+    align-items: center
+
+.main-page-banner
+    margin-bottom: -4px
+
+.main-page-catchprase
+    background-color: $catchphrase-section-bg-color
+    padding: 20px
+
+    h1
+        color: white
+
+.catch-phrase
+
+    position: relative
+    width: 85%
+    height: 50px
+    background-color: $catchphrase-bg-color
+    margin-top: 20px
+
+    p
+        margin-left: 20px
+        color: white
+
+    a
+
+        all: unset
+
+        position: absolute
+        margin-right: 20px
+        right: 0
+
+        cursor: pointer
+        background-color: $catchphrase-button-color
+        padding: 5px
+
+
+.main-page-video
+
+    position: relative
+    border: 2px solid black
+
+    img
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+
+        width: 100%
+
+    video
+        position: relative
+        z-index: 0
+        width: 100%
+
+.main-page-js-description
+    position: relative
+    padding: 30px
+    justify-items: center
+
+    min-height: 90vh
+
+    .force-right
+        height: 100%
+
+    .js-logo
+        justify-self: right
+        content: url("/design_elements/jobshop_prezentare_windows.svg")
+
+    p
+        word-wrap: normal
+        width: 60%
+        text-align: justify
+        text-align-last: left
+        justify-self: left
+        margin-left: 20px
+
+        font-size: 1.8rem
+
+@media (min-width: 961px)
+    .grid-layout
+        display: grid
+        grid-template-areas: 'col1 col2'
+        grid-template-columns: 30% auto
+
+@media (max-width: 960px)
+
+    .main-page-js-description
+
+        justify-items: left
+
+        .js-logo
+            width: 70%
+            content: url("/design_elements/jobshop_prezentare_telefon.svg")
+            justify-self: left
+
+        p
+            margin-left: 0
+
+
+    .grid-layout
+        display: grid
+        grid-template-areas: 'row1 / row2'
+        grid-template-rows: 1fr 1fr
