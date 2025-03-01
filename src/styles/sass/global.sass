@@ -1,12 +1,19 @@
-$site-width: 70%
-$catchphrase-section-bg-color: #9DAAD3
+$site-width: 100%
+$catchphrase-section-bg-color: #3b56a67F
 $catchphrase-bg-color: #333333
 $catchphrase-button-color: #FFFFFF
+
+$font-weight-extra-light: 200
+$font-weight-regular: 400
 
 *
     padding: 0
     margin: 0
     box-sizing: border-box
+
+    font-family: Inter
+    font-weight: normal
+    font-style: normal
     
 html
     width: $site-width
@@ -42,6 +49,7 @@ html
 
     h1
         color: white
+        font-weight: $font-weight-regular
 
 .catch-phrase
 
@@ -66,6 +74,8 @@ html
         cursor: pointer
         background-color: $catchphrase-button-color
         padding: 5px
+
+        font-weight: $font-weight-extra-light
 
 
 .main-page-video
@@ -96,8 +106,11 @@ html
     .force-right
         height: 100%
 
+        margin-right: -8px
+
     .js-logo
-        justify-self: right
+        width: 70%
+        justify-self: center
         content: url("/design_elements/jobshop_prezentare_windows.svg")
 
     p
@@ -106,9 +119,9 @@ html
         text-align: justify
         text-align-last: left
         justify-self: left
-        margin-left: 20px
 
-        font-size: 1.8rem
+        font-size: 1.5em
+        font-weight: $font-weight-extra-light
 
 @media (min-width: 961px)
     .grid-layout
@@ -123,13 +136,11 @@ html
         justify-items: left
 
         .js-logo
-            width: 70%
             content: url("/design_elements/jobshop_prezentare_telefon.svg")
             justify-self: left
 
         p
-            margin-left: 0
-
+            margin-bottom: 40px
 
     .grid-layout
         display: grid
