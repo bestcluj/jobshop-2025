@@ -4,11 +4,10 @@
   box-sizing: border-box;
   font-family: Inter;
   font-weight: 400;
-  overflow-x: hidden;
 }
 
 html {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -98,7 +97,6 @@ html {
 }
 .main-page-js-description .force-right {
   height: 100%;
-  margin-right: -8px;
   z-index: 0;
 }
 .main-page-js-description .js-logo {
@@ -143,7 +141,12 @@ html {
     grid-template-rows: auto auto;
   }
 }
-@media (max-width: 460px) {
+@media (max-width: 450px) {
+  .main-page-js-description .force-right {
+    margin-right: -120%;
+  }
+}
+@media (min-width: 451px) and (max-width: 460px) {
   .main-page-js-description .force-right {
     margin-right: -100%;
   }
