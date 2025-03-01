@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: Inter;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 html {
@@ -93,15 +94,18 @@ html {
   padding: 30px;
   justify-items: center;
   min-height: 90vh;
+  overflow: hidden;
 }
 .main-page-js-description .force-right {
   height: 100%;
   margin-right: -8px;
+  z-index: 0;
 }
 .main-page-js-description .js-logo {
   width: 70%;
   justify-self: center;
   content: url("/design_elements/jobshop_prezentare_windows.svg");
+  z-index: 1;
 }
 .main-page-js-description p {
   word-wrap: normal;
@@ -111,6 +115,7 @@ html {
   justify-self: left;
   font-size: 1.5em;
   font-weight: 200;
+  z-index: 1;
 }
 
 @media (min-width: 961px) {
@@ -127,13 +132,34 @@ html {
   .main-page-js-description .js-logo {
     content: url("/design_elements/jobshop_prezentare_telefon.svg");
     justify-self: left;
+    margin-top: 40px;
   }
   .main-page-js-description p {
     margin-bottom: 40px;
   }
   .grid-layout {
     display: grid;
-    grid-template-areas: "row1 / row2";
-    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "row1" "row2";
+    grid-template-rows: auto auto;
+  }
+}
+@media (max-width: 460px) {
+  .main-page-js-description .force-right {
+    margin-right: -100%;
+  }
+}
+@media (min-width: 461px) and (max-width: 500px) {
+  .main-page-js-description .force-right {
+    margin-right: -90%;
+  }
+}
+@media (min-width: 501px) and (max-width: 560px) {
+  .main-page-js-description .force-right {
+    margin-right: -50%;
+  }
+}
+@media (min-width: 561px) and (max-width: 660px) {
+  .main-page-js-description .force-right {
+    margin-right: -30%;
   }
 }
