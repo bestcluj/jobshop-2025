@@ -74,14 +74,14 @@ html {
 .main-page-video {
   position: relative;
 }
-.main-page-video .element_design_sus {
+.main-page-video .element-design-sus {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
   width: 100%;
 }
-.main-page-video .element_design_jos {
+.main-page-video .element-design-jos {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -170,4 +170,17 @@ html {
   .main-page-js-description .force-right {
     margin-right: -30%;
   }
+}
+
+.main-page-statistics {
+  position: relative;
+  height: 800px;
+}
+.main-page-statistics .design-element-sus {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-page-statistics .photos {
+  display: flex;
 }
