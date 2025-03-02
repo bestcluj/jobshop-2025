@@ -1,0 +1,15 @@
+---
+import "../styles/stats.css";
+
+const { imgSrc="/design_elements/white_square.png", imgAlt="undefined", stat="0", fontColor="#000" } = Astro.props;
+---
+
+<div class="card">
+
+    <img src={imgSrc} alt={imgAlt}>
+
+    <p class="stat"> {stat} </p>
+
+    <p class="text" style=`color: ${fontColor}`> <slot/> </p>
+
+</div>

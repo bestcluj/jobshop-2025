@@ -1,0 +1,40 @@
+.card {
+  width: 20vw;
+}
+.card img {
+  width: 20vw;
+  height: 20vw;
+  min-width: 100px;
+  min-height: 100px;
+}
+.card .stat {
+  text-align: center;
+  color: #333333;
+  font-weight: 300;
+  margin-top: -3rem;
+  font-size: 4.5rem;
+}
+.card .text {
+  text-align: justify;
+  text-align-last: left;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+@media (max-width: 1000px) {
+  .card .stat {
+    margin-top: -2.5rem;
+    font-size: 3.5rem;
+  }
+  .card .text {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 750px) {
+  .card .stat {
+    margin-top: -2rem;
+    font-size: 2.5rem;
+  }
+  .card .text {
+    font-size: 1.25rem;
+  }
+}
