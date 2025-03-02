@@ -1,11 +1,13 @@
 ---
 
-const { logoSrc="", text="undefined" } = Astro.props;
+const { logoSrc="", text="undefined", link="" } = Astro.props;
 
 ---
 
 <div>
 
-    <img src={logoSrc} alt={text + " logo"} />
+    <a href={link} target="_blank">
+        <img src={logoSrc} alt={text + " logo"} />
+    </a>
 
 </div>
