@@ -1,0 +1,52 @@
+---
+import "../styles/jobs.css";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CompanyCard from "../components/CompanyCard.astro";
+---
+
+<BaseLayout>
+
+    <section class="job-opp-companies section">
+
+        <div class="pink-bar-extension"> <h1> Job Opportunities </h1> </div>
+        <img src="/design_elements/bara_video.svg" alt="design element" class="top-pink-bar">
+
+        <div class="companies">
+
+            <CompanyCard companyName="Logo Compania 1"/>
+            <CompanyCard companyName="Logo Compania 2"/>
+            <CompanyCard companyName="Logo Compania 3"/>
+            <CompanyCard companyName="Logo Compania 4"/>
+            <CompanyCard companyName="Logo Compania 5"/>
+            <CompanyCard companyName="Logo Compania 6"/>
+            <CompanyCard companyName="Logo Compania 7"/>
+            <CompanyCard companyName="Logo Compania 8"/>
+            <CompanyCard companyName="Logo Compania 9"/>
+
+        </div>
+
+    </section>
+
+    <section class="job-opp-barter section">
+
+        <div class="design-element">
+
+            <div class="bara-subtire"></div>
+            <div class="bara-groasa"></div>
+            <div class="bara-albastra-extensie"> <h1> Barter </h1> </div>
+            <img src="/design_elements/bara_hts.svg" alt="design element" class="bara-albastra">
+
+        </div>
+
+        <div class="companies">
+            <CompanyCard companyName="Logo Entitate 1"/>        
+            <CompanyCard companyName="Logo Entitate 2"/>        
+            <CompanyCard companyName="Logo Entitate 3"/>        
+            <CompanyCard companyName="Logo Entitate 4"/>        
+            <CompanyCard companyName="Logo Entitate 5"/>        
+        </div>
+
+    </section>
+
+</BaseLayout>
