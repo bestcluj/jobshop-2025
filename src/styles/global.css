@@ -54,27 +54,47 @@ html {
   color: white;
   font-weight: 700;
 }
-
-.catch-phrase {
+.main-page-catchprase .catch-phrase {
   position: relative;
   width: 85%;
   height: 50px;
   background-color: #333333;
   margin-top: 20px;
+  padding: 0 20px;
 }
-.catch-phrase p {
-  margin-left: 20px;
+.main-page-catchprase .catch-phrase p {
+  text-align: center;
   color: white;
 }
-.catch-phrase a {
+.main-page-catchprase .catch-phrase a {
   all: unset;
-  position: absolute;
-  margin-right: 20px;
-  right: 0;
   cursor: pointer;
   background-color: #FFFFFF;
   padding: 5px;
   font-weight: 200;
+  font-family: Inter;
+}
+@media (min-width: 601px) {
+  .main-page-catchprase .catch-phrase a {
+    position: absolute;
+    margin-right: 20px;
+    right: 0;
+  }
+}
+@media (max-width: 600px) {
+  .main-page-catchprase .catch-phrase {
+    flex-direction: column;
+    height: 90px;
+    padding: 15px 20px;
+    width: max-content;
+  }
+  .main-page-catchprase .catch-phrase a {
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 20px 20px 0;
+  }
 }
 
 .main-page-video {
@@ -189,6 +209,19 @@ html {
 .main-page-statistics .design-element-sus {
   width: 100%;
 }
+.main-page-statistics .design-element-sus .bara-subtire {
+  background-color: #333333;
+  height: 50px;
+  margin-bottom: 50px;
+}
+.main-page-statistics .design-element-sus .bara-groasa {
+  background-color: #333333;
+  height: 100px;
+}
+.main-page-statistics .design-element-sus .bara-roz {
+  background-color: rgba(204, 31, 54, 0.4980392157);
+  height: 200px;
+}
 .main-page-statistics .design-element-jos .text {
   position: relative;
 }
@@ -226,12 +259,6 @@ html {
   width: 100%;
   height: 50px;
   background-color: #333333;
-}
-.main-page-statistics .bara-roz {
-  width: 100%;
-  background-color: rgba(204, 31, 54, 0.4980392157);
-  margin-top: -4px;
-  height: 200px;
 }
 .main-page-statistics .photos {
   margin-top: -150px;

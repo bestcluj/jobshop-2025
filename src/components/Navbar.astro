@@ -24,8 +24,8 @@ import "../styles/navbar.css"
             class="burger-menu"
             onclick="document.getElementById('anchors-floating').toggleAttribute('data-active')"
         >
-        <img src="/design_elements/flag_ro.svg" alt="romanian flag">
-        <img src="/design_elements/flag_en.svg" alt="england flag">
+        <img src="/design_elements/flag_ro.svg" alt="romanian flag" onclick="changeLanguage('ro')">
+        <img src="/design_elements/flag_en.svg" alt="england flag" onclick="changeLanguage('en')">
     </div>
 
     <div id="anchors-floating" onclick="document.getElementById('anchors-floating').toggleAttribute('data-active')">
@@ -39,3 +39,39 @@ import "../styles/navbar.css"
     </div>
     
 </nav>
+
+<script is:inline>
+
+    function changeLanguage(lang) {
+
+        document.getElementById("html").setAttribute("lang", lang);
+
+        switch (lang) {
+
+            case "ro": {
+
+                document.querySelectorAll('[data-lang]').values().forEach((item) => {
+                    
+                    item.setAttribute("data-display", item.style.display);
+                    item.style.display = "none";
+                });
+                document.querySelectorAll('[data-lang="ro"]').values().forEach((item) => { item.style.display = item.getAttribute("display"); });
+
+                break;
+            }
+
+            case "en": {
+
+                document.querySelectorAll('[data-lang]').values().forEach((item) => {
+                    
+                    item.setAttribute("data-display", item.style.display);
+                    item.style.display = "none";
+                });
+                document.querySelectorAll('[data-lang="en"]').values().forEach((item) => { item.style.display = item.getAttribute("display"); });
+
+                break;
+            }
+        }
+    }
+
+</script>
