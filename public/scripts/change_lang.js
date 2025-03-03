@@ -1,5 +1,6 @@
 window.addEventListener("load", (event) => {
 
+    alert("hello");
     document.querySelectorAll('[data-lang]').values().forEach((item) => {
                 
         item.setAttribute("data-display", item.style.display);
