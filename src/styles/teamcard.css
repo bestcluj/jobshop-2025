@@ -1,0 +1,22 @@
+.team-card {
+  width: 300px;
+}
+.team-card .poza {
+  display: block;
+  aspect-ratio: 1;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 100%;
+}
+.team-card p {
+  text-align: center;
+  font-size: 2rem;
+}
+.team-card .nume {
+  font-weight: 800;
+  color: #3b56a6;
+}
+.team-card .pozitie {
+  font-weight: 700;
+  color: rgba(59, 86, 166, 0.4980392157);
+}
