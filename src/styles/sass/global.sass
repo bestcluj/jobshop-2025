@@ -1,5 +1,6 @@
 $site-width: 100%
 $color-blue-transparent: #3b56a67F
+$color-blue: #3b56a6
 $color-gray: #333333
 $color-white: #FFFFFF
 $color-red-transparent: #cc1f367F
@@ -8,6 +9,7 @@ $font-weight-extra-light: 200
 $font-weight-light: 300
 $font-weight-regular: 400
 $font-weight-bold: 700
+$font-weight-extra-bold: 800
 
 *
     padding: 0
@@ -142,7 +144,7 @@ html
         z-index: 1
 
 @media (min-width: 961px)
-    .grid-layout
+    .grid-layout-js
         display: grid
         grid-template-areas: 'col1 col2'
         grid-template-columns: 30% auto
@@ -161,7 +163,7 @@ html
         p
             margin-bottom: 40px
 
-    .grid-layout
+    .grid-layout-js
         display: grid
         grid-template-areas: "row1" "row2"
         grid-template-rows: auto auto
@@ -278,4 +280,78 @@ html
         margin-top: -4px
 
 
+.main-page-hts
+
+    .grid-layout-hts
+
+        padding-bottom: 60px
+        margin: 0 auto
+        margin-top: -8rem
+
+        width: 80%
+
+        display: grid
+
+        @media (min-width: 961px)
+            grid-template-areas: "logo date" "logo description"
+            grid-template-columns: 30% auto
+            grid-template-rows: auto auto
+
+        @media (max-width: 960px)
+            grid-template-areas: "logo" "description" "date"
+            grid-template-columns: auto
+            grid-template-rows: auto auto auto
+            row-gap: 20px
+
+    .hts-logo
+        grid-area: logo
+        align-self: center
+
+    .hts-description
+        grid-area: description
+        width: 80%
+
+        font-size: 1.5em
+        font-weight: $font-weight-extra-light
+        text-align: justify
+        text-align-last: left
+
+        justify-self: flex-end
     
+    .hts-date
+        grid-area: date
+
+        font-size: 2em
+        font-weight: $font-weight-extra-bold
+        color: $color-blue
+
+        align-self: flex-end
+        justify-self: flex-end
+
+    @media (min-width: 961px)
+        .hts-logo
+            content: url("/design_elements/hts_prezentare_windows.svg")
+
+    @media (max-width: 960px)
+        .hts-logo
+            content: url("/design_elements/hts_prezentare_telefon.svg")
+
+            align-self: center
+            justify-self: left
+            width: 70%
+            margin-bottom: 20px
+        
+        .hts-description
+            width: 100%
+            justify-self: center
+        
+    @media (max-width: 800px)
+        .hts-logo
+            width: 80%
+            margin-bottom: 10px
+
+    @media (max-width: 600px)
+        .hts-logo
+            width: 90%
+        .grid-layout-hts
+            margin-top: -6rem

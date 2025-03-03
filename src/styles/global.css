@@ -127,7 +127,7 @@ html {
 }
 
 @media (min-width: 961px) {
-  .grid-layout {
+  .grid-layout-js {
     display: grid;
     grid-template-areas: "col1 col2";
     grid-template-columns: 30% auto;
@@ -145,7 +145,7 @@ html {
   .main-page-js-description p {
     margin-bottom: 40px;
   }
-  .grid-layout {
+  .grid-layout-js {
     display: grid;
     grid-template-areas: "row1" "row2";
     grid-template-rows: auto auto;
@@ -270,4 +270,80 @@ html {
   height: 150px;
   background-color: rgba(59, 86, 166, 0.4980392157);
   margin-top: -4px;
+}
+
+.main-page-hts .grid-layout-hts {
+  padding-bottom: 60px;
+  margin: 0 auto;
+  margin-top: -8rem;
+  width: 80%;
+  display: grid;
+}
+@media (min-width: 961px) {
+  .main-page-hts .grid-layout-hts {
+    grid-template-areas: "logo date" "logo description";
+    grid-template-columns: 30% auto;
+    grid-template-rows: auto auto;
+  }
+}
+@media (max-width: 960px) {
+  .main-page-hts .grid-layout-hts {
+    grid-template-areas: "logo" "description" "date";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 20px;
+  }
+}
+.main-page-hts .hts-logo {
+  grid-area: logo;
+  align-self: center;
+}
+.main-page-hts .hts-description {
+  grid-area: description;
+  width: 80%;
+  font-size: 1.5em;
+  font-weight: 200;
+  text-align: justify;
+  text-align-last: left;
+  justify-self: flex-end;
+}
+.main-page-hts .hts-date {
+  grid-area: date;
+  font-size: 2em;
+  font-weight: 800;
+  color: #3b56a6;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+@media (min-width: 961px) {
+  .main-page-hts .hts-logo {
+    content: url("/design_elements/hts_prezentare_windows.svg");
+  }
+}
+@media (max-width: 960px) {
+  .main-page-hts .hts-logo {
+    content: url("/design_elements/hts_prezentare_telefon.svg");
+    align-self: center;
+    justify-self: left;
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  .main-page-hts .hts-description {
+    width: 100%;
+    justify-self: center;
+  }
+}
+@media (max-width: 800px) {
+  .main-page-hts .hts-logo {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .main-page-hts .hts-logo {
+    width: 90%;
+  }
+  .main-page-hts .grid-layout-hts {
+    margin-top: -6rem;
+  }
 }
