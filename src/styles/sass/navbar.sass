@@ -1,10 +1,18 @@
 $navbar-height: 80px
-$navbar-color: #333333
+$floating-anchors-height: 250px
+$color-gray: #333333
+$color-gray-transparent: #3333337F    
+$font-weight-semi-bold: 600
 
 nav
+    position: relative
+
+    *
+        font-weight: $font-weight-semi-bold
+
     height: $navbar-height
     width: 100%
-    background-color: $navbar-color
+    background-color: $color-gray
     z-index: 2
 
     color: white
@@ -15,11 +23,81 @@ nav
     display: flex
     align-items: center
 
-    img
+    transform-style: preserve-3d
+
+    a
+        all: unset
+        cursor: pointer
+
+    .burger-menu
+        height: 40px
+
+    .option-buttons
         margin-right: 20px
+
+        *
+            height: calc( $navbar-height / 2 )
+            margin-right: 10px
+
+            cursor: pointer
 
     #js-logo
         margin-left: 30px
+        height: calc( $navbar-height / 2 )
 
-    #drop-down
-        cursor: pointer
+    .anchors
+        display: flex
+        flex-direction: row
+        width: calc( 100% - 400px )
+
+        justify-content: center
+        column-gap: 30px
+        margin-left: 40px
+
+    #anchors-floating
+
+        display: none
+
+        transform: translateZ(-10px)
+
+        width: 100%
+        height: $floating-anchors-height
+
+        text-align: center
+        background-color: $color-gray
+
+        position: absolute
+        left: 0
+        bottom: $navbar-height
+
+        transition: transform 0.5s, opacity 0.5s
+        transform-origin: top
+
+        flex-direction: column
+        row-gap: 10px
+        font-size: 2em
+
+        *
+            width: 100%
+
+    #anchors-floating[data-active]
+        transform: translateY( calc( $navbar-height + $floating-anchors-height - 4px ) )
+
+
+    .burger-menu
+        display: none
+
+    @media (max-width: 950px)
+        .anchors
+            display: none
+        .burger-menu
+            display: inline
+        #anchors-floating
+            display: flex
+
+    @media (max-width: 600px)
+        .option-buttons *, #js-logo
+            height: calc( $navbar-height / 2 - 10px  )
+
+        .option-buttons
+            margin-right: 5px

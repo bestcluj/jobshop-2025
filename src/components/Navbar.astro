@@ -4,14 +4,38 @@ import "../styles/navbar.css"
 
 <nav>
 
-    <img src="" alt="logo-JobShop®" id="js-logo">
-    
-    <div class="force-right">
+    <img src="/design_elements/jobshop.svg" alt="logo-JobShop®" id="js-logo">
+
+    <div class="anchors">
         
-        <img src="" alt="burger-dropdown" id="drop-down">
-        <img src="" alt="lang-flag-ro">
-        <img src="" alt="lang-flag-en">
+        <a href="#home-anchor"> Home </a>
+        <a href="#descriere-js"> About </a>
+        <a href=""> Job Oportunities </a>
+        <a href="#hts-anchor"> How To Start-Up </a>
+        <a href=""> Team </a>
 
     </div>
+    
+    <div class="option-buttons force-right">
 
+        <img
+            src="/design_elements/burger_menu_icon.svg"
+            alt="burger menu icon"
+            class="burger-menu"
+            onclick="document.getElementById('anchors-floating').toggleAttribute('data-active')"
+        >
+        <img src="/design_elements/flag_ro.svg" alt="romanian flag">
+        <img src="/design_elements/flag_en.svg" alt="england flag">
+    </div>
+
+    <div id="anchors-floating">
+
+        <a href="#home-anchor"> Home </a>
+        <a href="#descriere-js"> About </a>
+        <a href=""> Job Oportunities </a>
+        <a href="#hts-anchor"> How To Start-Up </a>
+        <a href=""> Team </a>
+
+    </div>
+    
 </nav>
