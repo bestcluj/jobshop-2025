@@ -22,6 +22,7 @@ $font-weight-extra-bold: 800
 html
     width: $site-width
     margin: 0 auto
+    line-height: 1.6
 
     scroll-behavior: smooth
     @media screen and (prefers-reduced-motion: reduce)
@@ -50,7 +51,7 @@ html
     align-items: center
 
 .main-page-banner
-    margin-bottom: -4px
+    margin-bottom: -7px
 
 .main-page-catchprase
     background-color: $color-blue-transparent
@@ -136,6 +137,8 @@ html
     .force-right
         height: 100%
         z-index: 0
+        position: absolute
+        top: 0
 
     .js-logo
         width: 70%
@@ -153,13 +156,11 @@ html
         font-size: 1.5rem
         font-weight: $font-weight-extra-light
 
-        z-index: 1
-
 @media (min-width: 961px)
     .grid-layout-js
         display: grid
         grid-template-areas: 'col1 col2'
-        grid-template-columns: 30% auto
+        grid-template-columns: 35% auto
 
 @media (max-width: 960px)
 
@@ -171,9 +172,13 @@ html
             content: url("/design_elements/jobshop_prezentare_telefon.svg")
             justify-self: left
             margin-top: 40px
+            margin-bottom: 60px
+            width: 60%
+            min-width: 300px
 
         p
             margin-bottom: 40px
+            min-width: 300px
 
     .grid-layout-js
         display: grid
@@ -294,18 +299,15 @@ html
 
     .blue-bar
         width: 100%
-        height: 150px
+        height: 250px
         background-color: $color-blue-transparent
-        margin-top: -4px
-
-
-.main-page-hts
+        margin-top: -7px
 
     .grid-layout-hts
 
         padding-bottom: 60px
         margin: 0 auto
-        margin-top: -8rem
+        margin-top: -12.5rem
 
         width: 80%
 
@@ -364,10 +366,15 @@ html
             width: 100%
             justify-self: center
         
+        .grid-layout-hts
+            margin-top: -10rem
+        
     @media (max-width: 800px)
         .hts-logo
             width: 80%
-            margin-bottom: 10px
+        
+        .grid-layout-hts
+            margin-top: -7rem
 
     @media (max-width: 600px)
         .hts-logo
