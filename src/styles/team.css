@@ -22,6 +22,12 @@
   .meet-the-team .js-team-photos {
     grid-template-areas: "Bia" "Laur" "Ria" "Mirzi" "Anda" "Raul" "Dia" "Maria" "Roman" "Anca" "Casi";
   }
+  .meet-the-team .js-team-photos #Roman {
+    margin-left: 0;
+  }
+  .meet-the-team .js-team-photos #Casi {
+    margin-left: 0;
+  }
 }
 .meet-the-team .js-team-photos #Bia {
   grid-area: Bia;
