@@ -62,7 +62,7 @@ nav #anchors-floating * {
   width: 100%;
 }
 nav #anchors-floating[data-active] {
-  transform: translateY(376px);
+  transform: translateY(373px);
 }
 nav .burger-menu {
   display: none;
