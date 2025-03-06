@@ -1,10 +1,10 @@
 ---
 import "../styles/teamcard.css";
 
-const { nume="test name", pozitie="test pozition", poza="" } = Astro.props;
+const { nume="test name", pozitie="test pozition", poza="", idCard="" } = Astro.props;
 ---
 
-<div class="team-card">
+<div class="team-card" id={idCard}>
 
     <img src={poza} alt=`${nume}'s picture` class="poza">
     <p class="nume"> {nume} </p>
