@@ -64,7 +64,7 @@ html
     .catch-phrase
 
         position: relative
-        width: 85%
+        width: 100%
         height: 50px
         background-color: $color-gray
         margin-top: 20px
@@ -82,24 +82,23 @@ html
             font-weight: $font-weight-extra-light
             font-family: Inter
 
-            @media (min-width: 601px)
-                position: absolute
-                margin-right: 20px
-                right: 0
+            position: absolute
+            margin-right: 20px
+            right: 0
 
-        @media (max-width: 600px)
-            flex-direction: column
-            height: 90px
-            padding: 15px 20px
-            width: max-content
-
+        @media screen and ( max-width: 500px )
+            p
+                font-size: .8rem
+                margin-left: -5px
+            
             a
-                margin-top: 10px
-                position: absolute
-                right: 0
-                bottom: 0
-                margin: 0 20px 20px 0
-
+                font-size: .8rem
+                padding: 1px 4px
+                margin-right: 15px
+        
+    @media screen and ( min-width: 560px )
+        .catch-phrase
+            width: 85%
 
 .main-page-video
 
