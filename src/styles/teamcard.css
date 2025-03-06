@@ -3,21 +3,20 @@
 }
 .team-card .poza {
   display: block;
-  aspect-ratio: 4/3;
+  aspect-ratio: 1;
   width: 300px;
-  border: 2px solid black;
 }
 .team-card p {
   text-align: center;
-  font-size: 2rem;
 }
 .team-card .nume {
-  font-weight: 800;
-  color: #3b56a6;
-  margin-top: -30px;
+  font-weight: 100;
+  color: #333333;
+  font-size: 4rem;
+  line-height: 1;
 }
 .team-card .pozitie {
-  font-weight: 700;
-  color: rgba(59, 86, 166, 0.4980392157);
-  margin-top: -20px;
+  font-weight: 900;
+  color: #3b56a6;
+  font-size: 1.5rem;
 }

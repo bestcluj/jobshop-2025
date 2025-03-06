@@ -1,6 +1,5 @@
 .meet-the-team
     position: relative
-    min-height: 100vh !important
 
     .vertical-strip
         height: 100vw
@@ -12,16 +11,17 @@
         display: none
 
     .js-team-photos
-        padding: 20px
-        z-index: 1
+        margin: 60px 0
         position: relative
         
         display: grid
         justify-content: center
-        grid-template-areas: ". Bia ." "Laur . Ria" "Mirzi . Anda" "Raul . Dia"
+        grid-template-areas: ". Bia ." "Laur . Ria" "Mirzi . Anda" "Raul . Dia" ". Maria ." "Roman Anca Casi"
+        grid-template-columns: auto auto auto
+        row-gap: 40px
+
         @media screen and ( max-width: 1000px )
-            grid-template-areas: "Bia" "Laur" "Ria" "Mirzi" "Anda" "Raul" "Dia"
-            row-gap: 40px
+            grid-template-areas: "Bia" "Laur" "Ria" "Mirzi" "Anda" "Raul" "Dia" "Maria" "Roman" "Anca" "Casi"
 
         #Bia
             grid-area: Bia
@@ -43,4 +43,18 @@
 
         #Dia
             grid-area: Dia
+
+        #Maria
+            grid-area: Maria
+
+        #Roman
+            grid-area: Roman
+            margin-left: -60px
+
+        #Anca
+            grid-area: Anca
+
+        #Casi
+            grid-area: Casi
+            margin-left: 60px
     

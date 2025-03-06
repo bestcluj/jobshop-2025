@@ -2,39 +2,39 @@ $color-blue-transparent: #3b56a67F
 $color-blue: #3b56a6
 $color-gray: #333333
 $color-white: #FFFFFF
+$color-red: #cc1f36
 $color-red-transparent: #cc1f367F
 
+$font-weight-thin: 100
 $font-weight-extra-light: 200
 $font-weight-light: 300
 $font-weight-regular: 400
 $font-weight-bold: 700
 $font-weight-extra-bold: 800
+$font-weight-black: 900
     
 $picture-size: 300px
 
-
 .team-card
     width: $picture-size
-    
+
     .poza
         display: block
-        aspect-ratio: 4 / 3
+        aspect-ratio: 1
         width: $picture-size
 
-        border: 2px solid black
-    
     p
         text-align: center
-        font-size: 2rem
     
     .nume
-        font-weight: $font-weight-extra-bold
-        color: $color-blue
+        font-weight: $font-weight-thin
+        color: $color-gray
 
-        margin-top: -30px
+        font-size: 4rem
+        line-height: 1
+
     
     .pozitie
-        font-weight: $font-weight-bold
-        color: $color-blue-transparent
-        
-        margin-top: -20px
+        font-weight: $font-weight-black
+        color: $color-blue
+        font-size: 1.5rem
