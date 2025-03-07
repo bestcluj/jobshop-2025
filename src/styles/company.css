@@ -22,6 +22,11 @@
   font-weight: 700;
   font-size: 2rem;
   color: #333333;
-  background-color: rgba(59, 86, 166, 0.4980392157);
   border-radius: 0.5rem;
+}
+.company-card a[data-color=blue] {
+  background-color: rgba(59, 86, 166, 0.4980392157);
+}
+.company-card a[data-color=red] {
+  background-color: rgba(204, 31, 54, 0.4980392157);
 }
