@@ -5,5 +5,5 @@ window.addEventListener("load", (event) => {
         item.setAttribute("data-display", item.style.display);
         item.style.display = "none";
     });
-    Array.from(document.querySelectorAll('[data-lang="en"]')).forEach((item) => { item.style.display = item.getAttribute("data-display"); });
+    Array.from(document.querySelectorAll('[data-lang="ro"]')).forEach((item) => { item.style.display = item.getAttribute("data-display"); });
 });
