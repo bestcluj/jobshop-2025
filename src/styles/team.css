@@ -16,7 +16,7 @@
   justify-content: center;
   grid-template-areas: ". Bia ." "Laur . Ria" "Mirzi . Anda" "Raul . Dia" ". Maria ." "Roman Anca Casi";
   grid-template-columns: auto auto auto;
-  row-gap: 40px;
+  row-gap: 120px;
 }
 .meet-the-team .js-team-photos #Bia {
   grid-area: Bia;
