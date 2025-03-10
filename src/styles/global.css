@@ -59,6 +59,11 @@ span {
   color: white;
   font-weight: 700;
 }
+@media screen and (max-width: 500px) {
+  .main-page-catchprase h1 {
+    font-size: 1.3rem;
+  }
+}
 .main-page-catchprase .catch-phrase {
   position: relative;
   width: 100%;
