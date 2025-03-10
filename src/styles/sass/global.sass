@@ -28,6 +28,8 @@ html
     @media screen and (prefers-reduced-motion: reduce)
         scroll-behavior: auto
 
+span
+    display: block
 
 .section
     height: fit-content
@@ -262,27 +264,272 @@ html
             height: 50px
             background-color: $color-gray
 
-    .photos
+    .photos-carrousel
         margin-top: -150px
-        display: flex
-        z-index: 1
+        position: relative
+        width: 100%
 
-        justify-content: space-evenly
+        min-height: 400px
+        transition: min-height 1s
 
-        margin-bottom: 40px
+        .card
+
+            transition: all 1s
+
+            transform-origin: top left
+
+            position: absolute
+            top: 0
+            
+            .text
+                transition: max-height 1s
+
+                max-height: 0
+                overflow-y: hidden
+
+        #card-1
+            left: 10%
+            transform: translateX(-10%)
+
+        #card-2
+            left: 50%
+            transform: translateX(-50%)
+
+        #card-3
+            left: 90%
+            transform: translateX(-90%)
+
+        &[data-move='card-1']
+
+            min-height: 600px
+    
+            #card-1
+                left: 75%
+                transform: translateX(-75%)
+                width: 700px
+
+                .text
+                    max-height: 1000px
+
+            #card-2, #card-3
+                top: 30px
+                left: 10%
+                transform: translateX(-10%)
+                transform: scale(0.5)
+
+            
+            #card-3
+                top: 250px
+
+
+            @media screen and ( max-width: 1300px  )
+
+                min-height: 650px
+
+                #card-1
+                    width: 600px
+                #card-2, #card-3
+                    top: 50px
+                    left: 5%
+                    transform: translateX(-5%)
+                    transform: scale(0.5)
+
+                #card-3
+                    top: 250px
+
+            @media screen and ( max-width: 900px  )
+
+                min-height: 550px
+
+                #card-1
+                    width: 550px
+                    left: 50%
+                    transform: translateX(-50%)
+
+                #card-2, #card-3
+                    top: -80px
+                    left: 5%
+                    transform: translateX(-5%)
+                    transform: scale(0.5)
+
+                #card-3
+                    left: 20%
+
+            @media screen and ( max-width: 600px  )
+
+                min-height: 700px
+
+                #card-1
+                    width: 350px
+                    left: 50%
+                    transform: translateX(-50%)
+
+                #card-2, #card-3
+                    top: -100px
+                    left: 5%
+                    transform: translateX(-5%)
+                    transform: scale(0.5)
+
+                #card-3
+                    left: 25%
+                
+
+        &[data-move='card-2']
+
+            min-height: 550px
+
+            #card-2
+                left: 75%
+                transform: translateX(-75%)
+                width: 700px
+
+                .text
+                    max-height: 1000px
+
+            #card-1, #card-3
+                top: 30px
+                left: 10%
+                transform: translateX(-10%)
+
+                transform: scale(0.5)
+            
+            #card-3
+                top: 250px
+
+            @media screen and ( max-width: 1300px  )
+                #card-2
+                    width: 600px
+                #card-1, #card-3
+                    top: 50px
+                    left: 5%
+                    transform: translateX(-5%)
+                    transform: scale(0.5)
+
+                #card-3
+                    top: 250px
+
+            @media screen and ( max-width: 900px  )
+                
+                min-height: 400px
+                
+                #card-2
+                    width: 550px
+                    left: 50%
+                    transform: translateX(-50%)
+
+                #card-1, #card-3
+                    top: -80px
+                    left: 5%
+                    transform: translateX(-5%)
+                    transform: scale(0.5)
+
+                #card-3
+                    left: 20%
+
+            @media screen and ( max-width: 600px  )
+
+                min-height: 550px
+
+                #card-2
+                    width: 350px
+                    left: 50%
+                    transform: translateX(-50%)
+
+                #card-1, #card-3
+                    top: -100px
+                    left: 5%
+                    transform: translateX(-5%)
+                    transform: scale(0.5)
+
+                #card-3
+                    left: 25%
+            
+
+        &[data-move='card-3']
+
+            min-height: 700px
+
+            #card-3
+                left: 75%
+                transform: translateX(-75%)
+                width: 700px
+
+                .text
+                    max-height: 1000px
+
+            #card-1, #card-2
+                top: 30px
+                left: 10%
+                transform: translateX(-10%)
+
+                transform: scale(0.5)
+            
+            #card-2
+                top: 250px
+
+            @media screen and ( max-width: 1300px  )
+                #card-3
+                    width: 600px
+                #card-1, #card-2
+                    top: 50px
+                    left: 5%
+                    transform: translateX(-5%)
+                    transform: scale(0.5)
+
+                #card-2
+                    top: 250px
+
+            @media screen and ( max-width: 900px  )
+                
+                min-height: 600px
+                
+                #card-3
+                    width: 550px
+                    left: 50%
+                    transform: translateX(-50%)
+
+                #card-1, #card-2
+                    top: -80px
+                    left: 5%
+                    transform: translateX(-5%)
+                    transform: scale(0.5)
+
+                #card-2
+                    left: 20%
+
+            @media screen and ( max-width: 600px  )
+
+                min-height: 850px
+
+                #card-3
+                    width: 350px
+                    left: 50%
+                    transform: translateX(-50%)
+
+                #card-1, #card-2
+                    top: -100px
+                    left: 5%
+                    transform: translateX(-5%)
+                    transform: scale(0.5)
+
+                #card-2
+                    left: 25%
+
+        
+
 
     @media (max-width: 1000px)
         .bara-roz
             height: 150px
 
-        .photos
+        .photos-carrousel
             margin-top: -100px
 
     @media (max-width: 650px)
         .bara-roz
             height: 100px
 
-        .photos
+        .photos-carrousel
             margin-top: -70px
 
 

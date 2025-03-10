@@ -18,6 +18,10 @@ html {
   }
 }
 
+span {
+  display: block;
+}
+
 .section {
   height: fit-content;
   width: 100%;
@@ -263,18 +267,260 @@ html {
   height: 50px;
   background-color: #333333;
 }
-.main-page-statistics .photos {
+.main-page-statistics .photos-carrousel {
   margin-top: -150px;
-  display: flex;
-  z-index: 1;
-  justify-content: space-evenly;
-  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  transition: min-height 1s;
+}
+.main-page-statistics .photos-carrousel .card {
+  transition: all 1s;
+  transform-origin: top left;
+  position: absolute;
+  top: 0;
+}
+.main-page-statistics .photos-carrousel .card .text {
+  transition: max-height 1s;
+  max-height: 0;
+  overflow-y: hidden;
+}
+.main-page-statistics .photos-carrousel #card-1 {
+  left: 10%;
+  transform: translateX(-10%);
+}
+.main-page-statistics .photos-carrousel #card-2 {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-page-statistics .photos-carrousel #card-3 {
+  left: 90%;
+  transform: translateX(-90%);
+}
+.main-page-statistics .photos-carrousel[data-move=card-1] {
+  min-height: 600px;
+}
+.main-page-statistics .photos-carrousel[data-move=card-1] #card-1 {
+  left: 75%;
+  transform: translateX(-75%);
+  width: 700px;
+}
+.main-page-statistics .photos-carrousel[data-move=card-1] #card-1 .text {
+  max-height: 1000px;
+}
+.main-page-statistics .photos-carrousel[data-move=card-1] #card-2, .main-page-statistics .photos-carrousel[data-move=card-1] #card-3 {
+  top: 30px;
+  left: 10%;
+  transform: translateX(-10%);
+  transform: scale(0.5);
+}
+.main-page-statistics .photos-carrousel[data-move=card-1] #card-3 {
+  top: 250px;
+}
+@media screen and (max-width: 1300px) {
+  .main-page-statistics .photos-carrousel[data-move=card-1] {
+    min-height: 650px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-1] #card-1 {
+    width: 600px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-1] #card-2, .main-page-statistics .photos-carrousel[data-move=card-1] #card-3 {
+    top: 50px;
+    left: 5%;
+    transform: translateX(-5%);
+    transform: scale(0.5);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-1] #card-3 {
+    top: 250px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .main-page-statistics .photos-carrousel[data-move=card-1] {
+    min-height: 550px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-1] #card-1 {
+    width: 550px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-1] #card-2, .main-page-statistics .photos-carrousel[data-move=card-1] #card-3 {
+    top: -80px;
+    left: 5%;
+    transform: translateX(-5%);
+    transform: scale(0.5);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-1] #card-3 {
+    left: 20%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-page-statistics .photos-carrousel[data-move=card-1] {
+    min-height: 700px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-1] #card-1 {
+    width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-1] #card-2, .main-page-statistics .photos-carrousel[data-move=card-1] #card-3 {
+    top: -100px;
+    left: 5%;
+    transform: translateX(-5%);
+    transform: scale(0.5);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-1] #card-3 {
+    left: 25%;
+  }
+}
+.main-page-statistics .photos-carrousel[data-move=card-2] {
+  min-height: 550px;
+}
+.main-page-statistics .photos-carrousel[data-move=card-2] #card-2 {
+  left: 75%;
+  transform: translateX(-75%);
+  width: 700px;
+}
+.main-page-statistics .photos-carrousel[data-move=card-2] #card-2 .text {
+  max-height: 1000px;
+}
+.main-page-statistics .photos-carrousel[data-move=card-2] #card-1, .main-page-statistics .photos-carrousel[data-move=card-2] #card-3 {
+  top: 30px;
+  left: 10%;
+  transform: translateX(-10%);
+  transform: scale(0.5);
+}
+.main-page-statistics .photos-carrousel[data-move=card-2] #card-3 {
+  top: 250px;
+}
+@media screen and (max-width: 1300px) {
+  .main-page-statistics .photos-carrousel[data-move=card-2] #card-2 {
+    width: 600px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-2] #card-1, .main-page-statistics .photos-carrousel[data-move=card-2] #card-3 {
+    top: 50px;
+    left: 5%;
+    transform: translateX(-5%);
+    transform: scale(0.5);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-2] #card-3 {
+    top: 250px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .main-page-statistics .photos-carrousel[data-move=card-2] {
+    min-height: 400px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-2] #card-2 {
+    width: 550px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-2] #card-1, .main-page-statistics .photos-carrousel[data-move=card-2] #card-3 {
+    top: -80px;
+    left: 5%;
+    transform: translateX(-5%);
+    transform: scale(0.5);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-2] #card-3 {
+    left: 20%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-page-statistics .photos-carrousel[data-move=card-2] {
+    min-height: 550px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-2] #card-2 {
+    width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-2] #card-1, .main-page-statistics .photos-carrousel[data-move=card-2] #card-3 {
+    top: -100px;
+    left: 5%;
+    transform: translateX(-5%);
+    transform: scale(0.5);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-2] #card-3 {
+    left: 25%;
+  }
+}
+.main-page-statistics .photos-carrousel[data-move=card-3] {
+  min-height: 700px;
+}
+.main-page-statistics .photos-carrousel[data-move=card-3] #card-3 {
+  left: 75%;
+  transform: translateX(-75%);
+  width: 700px;
+}
+.main-page-statistics .photos-carrousel[data-move=card-3] #card-3 .text {
+  max-height: 1000px;
+}
+.main-page-statistics .photos-carrousel[data-move=card-3] #card-1, .main-page-statistics .photos-carrousel[data-move=card-3] #card-2 {
+  top: 30px;
+  left: 10%;
+  transform: translateX(-10%);
+  transform: scale(0.5);
+}
+.main-page-statistics .photos-carrousel[data-move=card-3] #card-2 {
+  top: 250px;
+}
+@media screen and (max-width: 1300px) {
+  .main-page-statistics .photos-carrousel[data-move=card-3] #card-3 {
+    width: 600px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-3] #card-1, .main-page-statistics .photos-carrousel[data-move=card-3] #card-2 {
+    top: 50px;
+    left: 5%;
+    transform: translateX(-5%);
+    transform: scale(0.5);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-3] #card-2 {
+    top: 250px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .main-page-statistics .photos-carrousel[data-move=card-3] {
+    min-height: 600px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-3] #card-3 {
+    width: 550px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-3] #card-1, .main-page-statistics .photos-carrousel[data-move=card-3] #card-2 {
+    top: -80px;
+    left: 5%;
+    transform: translateX(-5%);
+    transform: scale(0.5);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-3] #card-2 {
+    left: 20%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-page-statistics .photos-carrousel[data-move=card-3] {
+    min-height: 850px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-3] #card-3 {
+    width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-3] #card-1, .main-page-statistics .photos-carrousel[data-move=card-3] #card-2 {
+    top: -100px;
+    left: 5%;
+    transform: translateX(-5%);
+    transform: scale(0.5);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-3] #card-2 {
+    left: 25%;
+  }
 }
 @media (max-width: 1000px) {
   .main-page-statistics .bara-roz {
     height: 150px;
   }
-  .main-page-statistics .photos {
+  .main-page-statistics .photos-carrousel {
     margin-top: -100px;
   }
 }
@@ -282,7 +528,7 @@ html {
   .main-page-statistics .bara-roz {
     height: 100px;
   }
-  .main-page-statistics .photos {
+  .main-page-statistics .photos-carrousel {
     margin-top: -70px;
   }
 }

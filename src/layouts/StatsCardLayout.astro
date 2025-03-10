@@ -1,12 +1,22 @@
 ---
 import "../styles/stats.css";
 
-const { imgSrc="/design_elements/white_square.png", imgAlt="undefined", stat="0", fontColor="#000" } = Astro.props;
+const { imgSrc="/design_elements/white_square.png", imgAlt="undefined", stat="0", fontColor="#000", idCard="" } = Astro.props;
 ---
 
-<div class="card">
+<div
+    class="card" id={idCard}
+    onclick="
 
-    <img src={imgSrc} alt={imgAlt}>
+        if (this.parentElement.hasAttribute('data-move') && this.parentElement.getAttribute('data-move') == this.id)
+            this.parentElement.removeAttribute('data-move');
+
+        else
+            this.parentElement.setAttribute('data-move', this.id)
+    "
+>
+
+    <img src={imgSrc} alt={imgAlt} />
 
     <p class="stat"> {stat} </p>
 

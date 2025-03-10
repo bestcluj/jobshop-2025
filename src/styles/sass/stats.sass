@@ -1,20 +1,17 @@
-$card-width: 20vw
-$card-min-size: 100px
-
 $color-gray: #333333
 $font-weight-extra-light: 200
 $font-weight-light: 300
-    
+
+
 .card
 
-    width: $card-width
-
     img
-        width: $card-width
-        height: $card-width
+        display: block
 
-        min-width: $card-min-size
-        min-height: $card-min-size
+        aspect-ratio: 1 / 1
+        height: auto
+
+        margin: 0 auto
 
     .stat
         text-align: center
@@ -24,26 +21,30 @@ $font-weight-light: 300
         margin-top: -3rem
         font-size: 4.5rem
 
-    .text > *
-        text-align: justify
-        text-align-last: left
-        font-size: 1.5rem
-        
-        font-weight: $font-weight-extra-light
+    .text
+        width: 100%
 
-    @media (max-width: 1000px)
+        *
+            text-align: justify
+            text-align-last: left
+            font-size: 1.5rem
+            
+            font-weight: $font-weight-extra-light
+
+    @media screen and ( min-width: 1300.1px  )
+        width: 300px
+        img
+            width: 300px
+
+    @media screen and ( max-width: 1300px  )
+        width: 250px
+        img
+            width: 250px
+
+    @media screen and ( max-width: 900px  )
+        width: 150px
+        img
+            width: 150px
         .stat
+            font-size: 3rem
             margin-top: -2.5rem
-            font-size: 3.5rem
-        .text > *
-            font-size: 1.25rem
-
-    @media (max-width: 750px)
-        .stat
-            margin-top: -2.0rem
-            font-size: 2.5rem
-        .text > *
-            font-size: 1.25rem
-        
-        
-
