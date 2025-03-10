@@ -572,6 +572,9 @@ span {
   }
 }
 
+.main-page-hts {
+  font-size: 0;
+}
 .main-page-hts .hts-image {
   width: 100%;
   height: auto;
@@ -584,16 +587,16 @@ span {
   width: 100%;
   height: 250px;
   background-color: rgba(59, 86, 166, 0.4980392157);
-  margin-top: -7px;
 }
 .main-page-hts .grid-layout-hts {
+  font-size: 1rem;
   padding-bottom: 60px;
   margin: 0 auto;
   margin-top: -12.5rem;
   width: 80%;
   display: grid;
 }
-@media (min-width: 961px) {
+@media (min-width: 960.1px) {
   .main-page-hts .grid-layout-hts {
     grid-template-areas: "logo date" "logo description";
     grid-template-columns: 30% auto;
@@ -629,7 +632,7 @@ span {
   align-self: flex-end;
   justify-self: flex-end;
 }
-@media (min-width: 961px) {
+@media (min-width: 960.1px) {
   .main-page-hts .hts-logo {
     content: url("/design_elements/hts_prezentare_windows.svg");
   }
