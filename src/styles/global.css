@@ -363,10 +363,18 @@ span {
     transform: translateX(-50%);
   }
   .main-page-statistics .photos-carrousel[data-move=card-1] #card-2, .main-page-statistics .photos-carrousel[data-move=card-1] #card-3 {
+    width: 150px;
     top: -100px;
     left: 5%;
     transform: translateX(-5%);
     transform: scale(0.5);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-1] #card-2 img, .main-page-statistics .photos-carrousel[data-move=card-1] #card-3 img {
+    width: 150px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-1] #card-2 .stat, .main-page-statistics .photos-carrousel[data-move=card-1] #card-3 .stat {
+    font-size: 3rem;
+    margin-top: -2.5rem;
   }
   .main-page-statistics .photos-carrousel[data-move=card-1] #card-3 {
     left: 25%;
@@ -435,10 +443,18 @@ span {
     transform: translateX(-50%);
   }
   .main-page-statistics .photos-carrousel[data-move=card-2] #card-1, .main-page-statistics .photos-carrousel[data-move=card-2] #card-3 {
+    width: 150px;
     top: -100px;
     left: 5%;
     transform: translateX(-5%);
     transform: scale(0.5);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-2] #card-1 img, .main-page-statistics .photos-carrousel[data-move=card-2] #card-3 img {
+    width: 150px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-2] #card-1 .stat, .main-page-statistics .photos-carrousel[data-move=card-2] #card-3 .stat {
+    font-size: 3rem;
+    margin-top: -2.5rem;
   }
   .main-page-statistics .photos-carrousel[data-move=card-2] #card-3 {
     left: 25%;
@@ -507,10 +523,18 @@ span {
     transform: translateX(-50%);
   }
   .main-page-statistics .photos-carrousel[data-move=card-3] #card-1, .main-page-statistics .photos-carrousel[data-move=card-3] #card-2 {
+    width: 150px;
     top: -100px;
     left: 5%;
     transform: translateX(-5%);
     transform: scale(0.5);
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-3] #card-1 img, .main-page-statistics .photos-carrousel[data-move=card-3] #card-2 img {
+    width: 150px;
+  }
+  .main-page-statistics .photos-carrousel[data-move=card-3] #card-1 .stat, .main-page-statistics .photos-carrousel[data-move=card-3] #card-2 .stat {
+    font-size: 3rem;
+    margin-top: -2.5rem;
   }
   .main-page-statistics .photos-carrousel[data-move=card-3] #card-2 {
     left: 25%;

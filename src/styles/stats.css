@@ -48,3 +48,15 @@
     margin-top: -2.5rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100px;
+  }
+  .card img {
+    width: 100px;
+  }
+  .card .stat {
+    font-size: 2rem;
+    margin-top: -1.5rem;
+  }
+}
