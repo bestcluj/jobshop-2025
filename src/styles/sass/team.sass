@@ -1,14 +1,27 @@
+$font-weight-extra-light: 200
+$font-weight-light: 300
+$font-weight-regular: 400
+$font-weight-bold: 700
+$font-weight-extra-bold: 800
+    
+$color-blue-transparent: #3b56a67F
+$color-blue: #3b56a6
+$color-gray: #333333
+$color-white: #FFFFFF
+$color-red: #cc1f36
+$color-red-transparent: #cc1f367F
+
 .meet-the-team
     position: relative
 
-    .vertical-strip
-        height: 100vw
-        position: absolute
-        left: 50vw
+    .mtt-title
+        padding: 60px 0
+        text-align: center
+        font-size: 5rem
+        font-weight: $font-weight-extra-bold
+        color: $color-red
 
-        transform-origin: left
-        transform: rotateZ(-90deg)
-        display: none
+        text-shadow: 3px 3px $color-red-transparent
 
     .js-team-photos
         margin: 60px 0

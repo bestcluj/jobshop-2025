@@ -1,13 +1,13 @@
 .meet-the-team {
   position: relative;
 }
-.meet-the-team .vertical-strip {
-  height: 100vw;
-  position: absolute;
-  left: 50vw;
-  transform-origin: left;
-  transform: rotateZ(-90deg);
-  display: none;
+.meet-the-team .mtt-title {
+  padding: 60px 0;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 800;
+  color: #cc1f36;
+  text-shadow: 3px 3px rgba(204, 31, 54, 0.4980392157);
 }
 .meet-the-team .js-team-photos {
   margin: 60px 0;
