@@ -82,6 +82,7 @@ nav
             width: 100%
 
     #anchors-floating[data-active]
+        display: flex
         transform: translateY( calc( $navbar-height + $floating-anchors-height - 7px ) )
 
 
@@ -93,8 +94,6 @@ nav
             display: none
         .burger-menu
             display: inline
-        #anchors-floating
-            display: flex
 
     @media (max-width: 600px)
         .option-buttons *, #js-logo
