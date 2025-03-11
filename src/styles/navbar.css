@@ -62,6 +62,7 @@ nav #anchors-floating * {
   width: 100%;
 }
 nav #anchors-floating[data-active] {
+  display: flex;
   transform: translateY(373px);
 }
 nav .burger-menu {
@@ -73,9 +74,6 @@ nav .burger-menu {
   }
   nav .burger-menu {
     display: inline;
-  }
-  nav #anchors-floating {
-    display: flex;
   }
 }
 @media (max-width: 600px) {

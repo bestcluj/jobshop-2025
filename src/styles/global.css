@@ -11,6 +11,7 @@ html {
   margin: 0 auto;
   line-height: 1.6;
   scroll-behavior: smooth;
+  scroll-padding: 20px;
 }
 @media screen and (prefers-reduced-motion: reduce) {
   html {
