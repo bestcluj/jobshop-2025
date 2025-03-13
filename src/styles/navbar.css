@@ -42,7 +42,7 @@ nav .anchors {
   margin-left: 40px;
 }
 nav #anchors-floating {
-  display: none;
+  display: flex;
   transform: translateZ(-10px);
   width: 100%;
   height: 300px;
@@ -62,7 +62,6 @@ nav #anchors-floating * {
   width: 100%;
 }
 nav #anchors-floating[data-active] {
-  display: flex;
   transform: translateY(373px);
 }
 nav .burger-menu {
