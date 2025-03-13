@@ -1,12 +1,14 @@
 ---
 import "../styles/company.css";
-const { companyLogo="", companyName="", color="blue", companySite="" } = Astro.props;
+const { companyLogo="", companyName="", color="blue", companySite="", forceImgWidth="" } = Astro.props;
 ---
 
 <div class="company-card">
 
-    <img src={companyLogo} alt=`logo companie ${companyName}`>
-    <a href={companySite} data-lang="en" data-color={color}> Visit Us! </a>
-    <a href={companySite} data-lang="ro" data-color={color}> Vizitează-ne! </a>
+    <div data-color={color}>
+        <img src={companyLogo} alt=`logo companie ${companyName}` style=`width: ${forceImgWidth};`>
+    </div>
+    <a href={companySite} data-lang="en"> Visit Us! </a>
+    <a href={companySite} data-lang="ro"> Vizitează-ne! </a>
 
 </div>

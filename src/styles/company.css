@@ -1,15 +1,18 @@
 .company-card {
-  border: 2px solid black;
-  border-radius: 1rem;
   overflow: clip;
   width: 400px;
   height: 250px;
   background-color: #FFFFFF;
 }
-.company-card img {
-  display: block;
-  width: 100%;
+.company-card div {
   height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.company-card div img {
+  display: block;
+  width: 90%;
 }
 .company-card a {
   position: relative;
@@ -19,14 +22,14 @@
   width: 100%;
   height: 50px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 100;
+  color: #FFFFFF;
+  background-color: #333333 !important;
   font-size: 2rem;
-  color: #333333;
-  border-radius: 0.5rem;
 }
-.company-card a[data-color=blue] {
+.company-card div[data-color=blue] {
   background-color: rgba(59, 86, 166, 0.4980392157);
 }
-.company-card a[data-color=red] {
+.company-card div[data-color=red] {
   background-color: rgba(204, 31, 54, 0.4980392157);
 }

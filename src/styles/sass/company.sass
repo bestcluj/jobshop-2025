@@ -4,6 +4,7 @@ $color-gray: #333333
 $color-white: #FFFFFF
 $color-red-transparent: #cc1f367F
 
+$font-weight-thin: 100
 $font-weight-extra-light: 200
 $font-weight-light: 300
 $font-weight-regular: 400
@@ -14,8 +15,8 @@ $card-width: 400px
 
 .company-card
 
-    border: 2px solid black
-    border-radius: 1rem
+    // border: 2px solid #333333
+    // border-radius: 1rem
     overflow: clip
 
     width: $card-width
@@ -23,10 +24,14 @@ $card-width: 400px
 
     background-color: $color-white
 
-    img
-        display: block
-        width: 100%
+    div
         height: 200px
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+            display: block
+            width: 90%
 
     a
         position: relative
@@ -38,14 +43,14 @@ $card-width: 400px
         width: 100%
         height: 50px
         text-align: center
-        font-weight: $font-weight-bold
+        font-weight: $font-weight-thin
+        color: $color-white
+        background-color: $color-gray !important
         font-size: 2rem
 
-        color: $color-gray
+        // border-radius: 0.5rem
 
-        border-radius: 0.5rem
-
-    a[data-color="blue"]
+    div[data-color="blue"]
         background-color: $color-blue-transparent
-    a[data-color="red"]
+    div[data-color="red"]
         background-color: $color-red-transparent
