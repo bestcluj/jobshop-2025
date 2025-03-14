@@ -325,6 +325,9 @@ span {
 .main-page-statistics .photos-carrousel[data-move=card-1] #card-1 .text {
   max-height: 1000px;
 }
+.main-page-statistics .photos-carrousel[data-move=card-1] #card-1 .stat::after {
+  animation: none;
+}
 .main-page-statistics .photos-carrousel[data-move=card-1] #card-2, .main-page-statistics .photos-carrousel[data-move=card-1] #card-3 {
   top: 30px;
   left: 10%;
@@ -408,6 +411,9 @@ span {
 .main-page-statistics .photos-carrousel[data-move=card-2] #card-2 .text {
   max-height: 1000px;
 }
+.main-page-statistics .photos-carrousel[data-move=card-2] #card-2 .stat::after {
+  animation: none;
+}
 .main-page-statistics .photos-carrousel[data-move=card-2] #card-1, .main-page-statistics .photos-carrousel[data-move=card-2] #card-3 {
   top: 30px;
   left: 10%;
@@ -487,6 +493,9 @@ span {
 }
 .main-page-statistics .photos-carrousel[data-move=card-3] #card-3 .text {
   max-height: 1000px;
+}
+.main-page-statistics .photos-carrousel[data-move=card-3] #card-3 .stat::after {
+  animation: none;
 }
 .main-page-statistics .photos-carrousel[data-move=card-3] #card-1, .main-page-statistics .photos-carrousel[data-move=card-3] #card-2 {
   top: 30px;
