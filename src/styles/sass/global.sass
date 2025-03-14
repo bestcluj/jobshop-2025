@@ -220,7 +220,7 @@ span
 .main-page-statistics
 
     position: relative
-    padding-bottom: 40px
+    // padding-bottom: 40px
 
     .design-element-sus
         width: 100%
@@ -577,14 +577,25 @@ span
     .hts-image
         width: 100%
         height: auto
-        border: 2px solid black
+
+        filter: grayscale(100%)
+        z-index: 0
 
     .design-element-sus
         width: 100%
+        z-index: 1
+        position: relative
+        margin-top: -80px
+
 
     .blue-bar
         width: 100%
         height: 250px
+
+        @media screen and ( max-width: 600px )
+            height: 150px
+            
+
         background-color: $color-blue-transparent
         // margin-top: -7px
 

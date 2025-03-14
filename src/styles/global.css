@@ -219,7 +219,6 @@ span {
 
 .main-page-statistics {
   position: relative;
-  padding-bottom: 40px;
 }
 .main-page-statistics .design-element-sus {
   width: 100%;
@@ -581,15 +580,24 @@ span {
 .main-page-hts .hts-image {
   width: 100%;
   height: auto;
-  border: 2px solid black;
+  filter: grayscale(100%);
+  z-index: 0;
 }
 .main-page-hts .design-element-sus {
   width: 100%;
+  z-index: 1;
+  position: relative;
+  margin-top: -80px;
 }
 .main-page-hts .blue-bar {
   width: 100%;
   height: 250px;
   background-color: rgba(59, 86, 166, 0.4980392157);
+}
+@media screen and (max-width: 600px) {
+  .main-page-hts .blue-bar {
+    height: 150px;
+  }
 }
 .main-page-hts .grid-layout-hts {
   font-size: 1rem;
