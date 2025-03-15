@@ -50,10 +50,13 @@
   z-index: 1;
   padding: 15px 25px;
   text-align: justify;
-  color: #FFFFFF;
   background-color: #3b56a6;
   overflow-y: scroll;
   overflow-x: visible;
+}
+.company-card .description * {
+  color: #FFFFFF;
+  font-weight: 700;
 }
 .company-card .description::-webkit-scrollbar {
   width: 1rem;
@@ -63,6 +66,7 @@
 }
 .company-card .description::-webkit-scrollbar-thumb {
   background-color: #333333;
+  border-radius: 20px;
 }
 .company-card[data-description] .description {
   top: 0;

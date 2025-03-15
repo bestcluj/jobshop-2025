@@ -15,11 +15,47 @@ const {
     <div data-color={color} class="logo">
         <img src={companyLogo} alt=`logo companie ${companyName}` style=`width: ${forceImgWidth};`>
     </div>
-    <div class="description-bttn" data-lang="en" onclick="this.parentElement.toggleAttribute('data-description')"> Find more! </div>
-    <div class="description-bttn"onclick="this.parentElement.toggleAttribute('data-description')"> Mai multe! </div>
+    <div
+        class="description-bttn"
+        data-lang="en"
+        onclick="
+            close = this.parentElement.hasAttribute('data-description');
+            closeDescriptions();
+
+            if(!close)
+                this.parentElement.toggleAttribute('data-description');
+        "
+    >
+        Find more!
+    </div>
+
+    <div
+        class="description-bttn"
+        data-lang="ro"
+        onclick="
+            close = this.parentElement.hasAttribute('data-description');
+            closeDescriptions();
+
+            if(!close)
+                this.parentElement.toggleAttribute('data-description');
+        "
+    >
+        Mai multe!
+    </div>
 
     <div class="description">
         <slot/>
     </div>
 
 </div>
+
+<script is:inline>
+
+    function closeDescriptions() {
+
+        [... document.getElementsByClassName("company-card")].forEach((card) => {
+            card.removeAttribute("data-description");
+        });
+    }
+
+</script>
