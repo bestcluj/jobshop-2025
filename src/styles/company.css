@@ -1,21 +1,22 @@
 .company-card {
-  overflow: clip;
+  overflow: hidden;
+  position: relative;
   width: 400px;
   height: 250px;
   background-color: #FFFFFF;
 }
-.company-card div {
+.company-card .logo {
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 }
-.company-card div img {
+.company-card .logo img {
   display: block;
   width: 90%;
 }
-.company-card a {
-  position: relative;
+.company-card .description-bttn {
   all: unset;
   cursor: pointer;
   display: block;
@@ -24,12 +25,40 @@
   text-align: center;
   font-weight: 100;
   color: #FFFFFF;
-  background-color: #333333 !important;
+  background-color: #333333;
   font-size: 2rem;
+  position: relative;
+  z-index: 2;
 }
 .company-card div[data-color=blue] {
   background-color: rgba(59, 86, 166, 0.4980392157);
 }
 .company-card div[data-color=red] {
-  background-color: rgba(204, 31, 54, 0.4980392157);
+  background-color: #cc1f36;
+}
+.company-card .description {
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  top: 250px;
+  transition: all 1s ease-in-out;
+  z-index: 1;
+  padding: 15px 25px;
+  text-align: justify;
+  color: #FFFFFF;
+  background-color: #3b56a6;
+  overflow-y: scroll;
+  overflow-x: visible;
+}
+.company-card .description::-webkit-scrollbar {
+  width: 1rem;
+}
+.company-card .description::-webkit-scrollbar-track {
+  background-color: #9daad2;
+}
+.company-card .description::-webkit-scrollbar-thumb {
+  background-color: #333333;
+}
+.company-card[data-description] .description {
+  top: 0;
 }

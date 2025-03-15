@@ -1,8 +1,11 @@
-$color-blue-transparent: #3b56a67F
-$color-blue: #3b56a6
 $color-gray: #333333
 $color-white: #FFFFFF
+$color-blue-transparent-equivalent: #9daad2
+$color-blue-transparent: #3b56a67F
+$color-blue: #3b56a6
+$color-red-transparent-equivalent: #e58f9a
 $color-red-transparent: #cc1f367F
+$color-red: #cc1f36
 
 $font-weight-thin: 100
 $font-weight-extra-light: 200
@@ -11,30 +14,31 @@ $font-weight-regular: 400
 $font-weight-bold: 700
 $font-weight-extra-bold: 800
 
-$card-width: 400px    
+$card-width: 400px
+$card-height: 250px
 
 .company-card
 
-    // border: 2px solid #333333
-    // border-radius: 1rem
-    overflow: clip
+    overflow: hidden
+    position: relative
 
     width: $card-width
-    height: 250px
+    height: $card-height
 
     background-color: $color-white
 
-    div
+    .logo
         height: 200px
         display: flex
         justify-content: center
         align-items: center
+
+        z-index: 0
         img
             display: block
             width: 90%
 
-    a
-        position: relative
+    .description-bttn
 
         all: unset
         cursor: pointer
@@ -45,12 +49,53 @@ $card-width: 400px
         text-align: center
         font-weight: $font-weight-thin
         color: $color-white
-        background-color: $color-gray !important
+        background-color: $color-gray
         font-size: 2rem
 
-        // border-radius: 0.5rem
+        position: relative
+
+        z-index: 2
+
 
     div[data-color="blue"]
         background-color: $color-blue-transparent
     div[data-color="red"]
-        background-color: $color-red-transparent
+        background-color: $color-red
+
+    .description
+        height: 200px
+        width: 100%
+        position: absolute
+
+        top: $card-height
+        transition: all 1s ease-in-out
+
+        z-index: 1
+
+        padding: 15px 25px
+        text-align: justify
+
+        color: $color-white
+
+        background-color: $color-blue
+        overflow-y: scroll
+        overflow-x: visible
+
+        &::-webkit-scrollbar
+            width: 1rem
+
+        &::-webkit-scrollbar-track
+            background-color: $color-blue-transparent-equivalent
+        
+        &::-webkit-scrollbar-thumb
+            background-color: $color-gray
+
+        &::-webkit-scrollbar-corner
+            
+
+
+    &[data-description]
+        .description
+            top: 0
+
+
