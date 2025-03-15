@@ -6,9 +6,6 @@ const {
     color="blue",
     companySite="",
     forceImgWidth="",
-    
-    roDescription = "",
-    enDescription = "",
 
 } = Astro.props;
 ---
@@ -19,9 +16,10 @@ const {
         <img src={companyLogo} alt=`logo companie ${companyName}` style=`width: ${forceImgWidth};`>
     </div>
     <div class="description-bttn" data-lang="en" onclick="this.parentElement.toggleAttribute('data-description')"> Find more! </div>
-    <div class="description-bttn" data-lang="ro" onclick="this.parentElement.toggleAttribute('data-description')"> Mai multe! </div>
+    <div class="description-bttn"onclick="this.parentElement.toggleAttribute('data-description')"> Mai multe! </div>
 
-    <div class="description" data-lang="en"> {enDescription} </div>
-    <div class="description" data-lang="ro"> {roDescription} </div>
+    <div class="description">
+        <slot/>
+    </div>
 
 </div>

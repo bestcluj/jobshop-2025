@@ -19,6 +19,11 @@ $card-height: 250px
 
 .company-card
 
+    a
+        all: unset
+        cursor: pointer
+        text-decoration: underline $color-blue-transparent-equivalent
+
     overflow: hidden
     position: relative
 
@@ -68,7 +73,7 @@ $card-height: 250px
         position: absolute
 
         top: $card-height
-        transition: all 1s ease-in-out
+        transition: all 0.5s ease-in-out
 
         z-index: 1
 
