@@ -28,6 +28,11 @@ footer {
 .contact-info * {
   font-weight: 400;
 }
+.contact-info a {
+  all: unset;
+  cursor: pointer;
+  text-decoration: underline 1px #333333;
+}
 
 .copyright {
   height: 2rem;
