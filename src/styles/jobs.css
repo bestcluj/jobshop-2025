@@ -86,10 +86,25 @@
 }
 .job-opp-barter .design-element .bara-albastra-extensie h1 {
   font-weight: 700;
-  font-size: 6rem;
   color: #333333;
   text-align: center;
   padding: 20px 0;
+  font-size: 6rem;
+}
+@media screen and (max-width: 660px) {
+  .job-opp-barter .design-element .bara-albastra-extensie h1 {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .job-opp-barter .design-element .bara-albastra-extensie h1 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .job-opp-barter .design-element .bara-albastra-extensie h1 {
+    font-size: 3.7rem;
+  }
 }
 .job-opp-barter .design-element .bara-albastra-extensie h1.catch-phrase {
   font-size: 2rem;

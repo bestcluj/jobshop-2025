@@ -40,7 +40,7 @@
   background-color: rgba(59, 86, 166, 0.4980392157);
 }
 .company-card div[data-color=red] {
-  background-color: #cc1f36;
+  background-color: rgba(204, 31, 54, 0.4980392157);
 }
 .company-card .description {
   height: 200px;

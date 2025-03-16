@@ -95,10 +95,17 @@ $font-weight-extra-bold: 800
             
             h1
                 font-weight: $font-weight-bold
-                font-size: 6rem
                 color: $color-gray
                 text-align: center
                 padding: 20px 0
+                font-size: 6rem
+
+                @media screen and ( max-width:660px )
+                    font-size: 5rem
+                @media screen and ( max-width:560px )
+                    font-size: 4rem
+                @media screen and ( max-width:460px )
+                    font-size: 3.7rem
 
             h1.catch-phrase
                 font-size: 2rem

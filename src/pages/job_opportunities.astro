@@ -99,26 +99,27 @@ import CompanyCard from "../components/CompanyCard.astro";
 
     </section>
 
-    <section class="job-opp-barter section" style="display: none;">
+    <section class="job-opp-barter section" >
 
         <div class="design-element">
 
             <div class="bara-subtire"></div>
             <div class="bara-groasa"></div>
             <div class="bara-albastra-extensie">
-                <h1> Barter </h1>
-                <h1 class="catch-phrase"> Ceva catch-phrase </h1>
+                <h1 data-lang="ro"> Colaboratori </h1>
+                <h1 data-lang="en"> Collaborators </h1>
+                <!-- <h1 class="catch-phrase"> Ceva catch-phrase </h1> -->
             </div>
             <img src="/design_elements/bara_hts.svg" alt="design element" class="bara-albastra">
 
         </div>
 
         <div class="companies">
-            <CompanyCard companyName="Logo Entitate 1" color="red"/>        
-            <CompanyCard companyName="Logo Entitate 2" color="red"/>        
-            <CompanyCard companyName="Logo Entitate 3" color="red"/>        
-            <CompanyCard companyName="Logo Entitate 4" color="red"/>        
-            <CompanyCard companyName="Logo Entitate 5" color="red"/>        
+            <CompanyCard companyLogo="logos/ccoc.png" companyName="CCOC" color="red" companySite="https://www.utcluj.ro/ococ/"/>
+            <!-- <CompanyCard companyName="Logo Entitate 2" color="red"/>
+            <CompanyCard companyName="Logo Entitate 3" color="red"/>
+            <CompanyCard companyName="Logo Entitate 4" color="red"/>
+            <CompanyCard companyName="Logo Entitate 5" color="red"/> -->
         </div>
 
     </section>
