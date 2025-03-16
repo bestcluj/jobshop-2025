@@ -15,7 +15,8 @@ const {
     <div data-color={color} class="logo">
         <img src={companyLogo} alt=`logo companie ${companyName}` style=`width: ${forceImgWidth};`>
     </div>
-    <div
+    
+    <!-- <div
         class="description-bttn"
         data-lang="en"
         onclick="
@@ -41,7 +42,10 @@ const {
         "
     >
         Mai multe!
-    </div>
+    </div> -->
+
+    <a href={companySite} target="_blank" data-lang="en" class="description-bttn"> Find more! </a>
+    <a href={companySite} target="_blank" data-lang="ro" class="description-bttn"> Mai multe! </a>
 
     <div class="description">
         <slot/>
