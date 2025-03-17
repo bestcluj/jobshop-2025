@@ -52,34 +52,7 @@ import "../styles/navbar.css"
 
     function changeLanguage(lang) {
 
-        document.getElementById("html").setAttribute("lang", lang);
-
-        switch (lang) {
-
-            case "ro": {
-
-                Array.from(document.querySelectorAll('[data-lang]')).forEach((item) => {
-                    
-                    item.setAttribute("data-display", item.style.display);
-                    item.style.display = "none";
-                });
-                Array.from(document.querySelectorAll('[data-lang="ro"]')).forEach((item) => { item.style.display = item.getAttribute("display"); });
-
-                break;
-            }
-
-            case "en": {
-
-                Array.from(document.querySelectorAll('[data-lang]')).forEach((item) => {
-                    
-                    item.setAttribute("data-display", item.style.display);
-                    item.style.display = "none";
-                });
-                Array.from(document.querySelectorAll('[data-lang="en"]')).forEach((item) => { item.style.display = item.getAttribute("display"); });
-
-                break;
-            }
-        }
+        html.lang = lang;
     }
 
 </script>
