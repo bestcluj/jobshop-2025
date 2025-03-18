@@ -1,0 +1,3 @@
+[submodule "public/companies"]
+	path = public/companies
+	url = https://github.com/Smoothye/JobShop25-Stand-App
