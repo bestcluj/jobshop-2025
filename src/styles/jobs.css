@@ -101,12 +101,17 @@
 }
 @media screen and (max-width: 560px) {
   .job-opp-barter .design-element .bara-albastra-extensie h1 {
-    font-size: 4rem;
+    font-size: 3.9rem;
   }
 }
 @media screen and (max-width: 460px) {
   .job-opp-barter .design-element .bara-albastra-extensie h1 {
     font-size: 3.7rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .job-opp-barter .design-element .bara-albastra-extensie h1[data-lang=en] {
+    font-size: 3.4rem;
   }
 }
 .job-opp-barter .design-element .bara-albastra-extensie h1.catch-phrase {
