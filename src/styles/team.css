@@ -14,7 +14,7 @@
   position: relative;
   display: grid;
   justify-content: center;
-  grid-template-areas: ". Bia ." "Laur . Ria" "Mirzi . Anda" "Raul . Dia" ". Maria ." "Roman Anca Casi";
+  grid-template-areas: ". Bia ." "Laur . Ria" "Mirzi . Anda" "Raul . Dia" ". Maria ." "Roman Anca Casi" "Alex . Bia-Bob";
   grid-template-columns: auto auto auto;
   row-gap: 120px;
 }
@@ -53,9 +53,15 @@
   grid-area: Casi;
   margin-left: 60px;
 }
+.meet-the-team .js-team-photos #Alex {
+  grid-area: Alex;
+}
+.meet-the-team .js-team-photos #Bia-Bob {
+  grid-area: Bia-Bob;
+}
 @media screen and (max-width: 1000px) {
   .meet-the-team .js-team-photos {
-    grid-template-areas: "Bia" "Laur" "Ria" "Mirzi" "Anda" "Raul" "Dia" "Maria" "Roman" "Anca" "Casi";
+    grid-template-areas: "Bia" "Laur" "Ria" "Mirzi" "Anda" "Raul" "Dia" "Maria" "Roman" "Anca" "Casi" "Alex" "Bia-Bob";
   }
   .meet-the-team .js-team-photos #Roman {
     margin-left: 0;
