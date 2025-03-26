@@ -1,0 +1,9 @@
+---
+const { pageNumber, img } = Astro.props;
+---
+
+<div id=`page${pageNumber}-narrow` class="page">
+    <div class="content-narrow">
+        <img data-src={img} style="position: absolute;">
+    </div>
+</div>

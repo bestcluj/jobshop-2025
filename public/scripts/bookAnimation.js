@@ -3,7 +3,7 @@ var prevButton = document.getElementById("prev");
 var nextButton = document.getElementById("next");
 var butonCuprins = document.getElementById("buton-cuprins");
 
-//!!! NUMARUL DE PAGINI DIN  src/pages/ghid.astro                   !!!
+//!!! NUMARUL DE PAGINI DIN  src/pages/booklet.astro                !!!
 //!!! NUMARUL DE PAGINI DIN  public/scripts/bookAnimationNarrow.js  !!!
 var numberOfPages = 5; // numar total de pagini (ar trebui sa fie numar par) impartit la 2
 var currentPage = 1;

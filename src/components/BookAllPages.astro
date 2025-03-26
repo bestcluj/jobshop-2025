@@ -25,10 +25,16 @@ const { numberOfPages } = Astro.props;
         --color-white: #f3f2f7;
         --color-orange: #ff8b00;
         --color-yellow: #fec400;
-        --color-dark-blue: #202b6d;
-        --color-light-blue: #2f4ab1;
+        --color-dark-blue: #3b56a6;
+        --color-light-blue: #3b56a67F;
 
-        /* ghid */
+    /*  $color-blue-transparent: #3b56a67F
+        $color-blue: #3b56a6
+        $color-gray: #333333
+        $color-white: #FFFFFF
+        $color-red-transparent: #cc1f367F */
+
+        /* booklet */
         --page-flip-duration: 1s;
         --book-move-duration: 1s;
         --page-flip-perspective: 3000px;
@@ -279,11 +285,11 @@ const { numberOfPages } = Astro.props;
         bottom: -15%;
 
         font-size: 3rem;
-        color: var(--color-yellow);
-        filter: drop-shadow(1px 0 0 var(--color-orange))
-                drop-shadow(-1px 0 0 var(--color-orange))
-                drop-shadow(0 1px 0 var(--color-orange))
-                drop-shadow(0 -1px 0 var(--color-orange));
+        color: var(--color-dark-blue);
+        filter: drop-shadow(1px 0 0 var(--color-light-blue))
+                drop-shadow(-1px 0 0 var(--color-light-blue))
+                drop-shadow(0 1px 0 var(--color-light-blue))
+                drop-shadow(0 -1px 0 var(--color-light-blue));
 
         z-index: 3;
 
