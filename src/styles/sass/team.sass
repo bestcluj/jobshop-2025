@@ -29,7 +29,7 @@ $color-red-transparent: #cc1f367F
         
         display: grid
         justify-content: center
-        grid-template-areas: ". Bia ." "Laur . Ria" "Mirzi . Anda" "Raul . Dia" ". Maria ." "Roman Anca Casi"
+        grid-template-areas: ". Bia ." "Laur . Ria" "Mirzi . Anda" "Raul . Dia" ". Maria ." "Roman Anca Casi" "Alex . Bia-Bob"
         grid-template-columns: auto auto auto
         row-gap: 120px
 
@@ -68,8 +68,14 @@ $color-red-transparent: #cc1f367F
             grid-area: Casi
             margin-left: 60px
 
+        #Alex
+            grid-area: Alex
+
+        #Bia-Bob
+            grid-area: Bia-Bob
+
         @media screen and ( max-width: 1000px )
-            grid-template-areas: "Bia" "Laur" "Ria" "Mirzi" "Anda" "Raul" "Dia" "Maria" "Roman" "Anca" "Casi"
+            grid-template-areas: "Bia" "Laur" "Ria" "Mirzi" "Anda" "Raul" "Dia" "Maria" "Roman" "Anca" "Casi" "Alex" "Bia-Bob"
             #Roman
                 margin-left: 0
             #Casi

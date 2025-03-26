@@ -1,4 +1,5 @@
 $navbar-height: 80px
+// $floating-anchors-height: 350px
 $floating-anchors-height: 300px
 $color-gray: #333333
 $color-gray-transparent: #3333337F    
@@ -51,8 +52,12 @@ nav
         width: calc( 100% - 400px )
 
         justify-content: center
+        align-content: center
         column-gap: 30px
         margin-left: 40px
+
+        a
+            align-content: center
 
     #anchors-floating
 
@@ -87,6 +92,14 @@ nav
 
     .burger-menu
         display: none
+
+    @media screen and ( max-width: 1100px )
+        .anchors
+            font-size: 0.8rem
+        
+    @media screen and ( min-width: 950.1px )
+        #anchors-floating
+            display: none
 
     @media (max-width: 950px)
         .anchors

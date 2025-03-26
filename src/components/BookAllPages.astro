@@ -1,0 +1,319 @@
+---
+import BookPage from "./BookPage.astro";
+const { numberOfPages } = Astro.props;
+---
+
+{Array.from({length: numberOfPages}).map(
+
+    (val, index) => {
+        
+        return <BookPage   pageNumber={index + 1}
+                    frontImg=`/meet_the_team/Raul.svg`
+                    backImg=`/meet_the_team/Mirzi.svg`
+                />
+    }
+)}
+
+<style is:global>
+
+    :root {
+
+        --page-width: 400px;
+        --page-height: 400px;
+        
+        /* paleta culori */
+        --color-white: #f3f2f7;
+        --color-orange: #ff8b00;
+        --color-yellow: #fec400;
+        --color-dark-blue: #3b56a6;
+        --color-light-blue: #3b56a67F;
+
+    /*  $color-blue-transparent: #3b56a67F
+        $color-blue: #3b56a6
+        $color-gray: #333333
+        $color-white: #FFFFFF
+        $color-red-transparent: #cc1f367F */
+
+        /* booklet */
+        --page-flip-duration: 1s;
+        --book-move-duration: 1s;
+        --page-flip-perspective: 3000px;
+
+        --book-page-width: var(--page-width);
+        --book-page-height: var(--page-height);
+        
+        --buton-cuprins-width: 100px;
+        --buton-cuprins-height: 30px;
+    }
+
+    #book-wrapper {
+
+        position: relative;
+        width: var(--book-page-width);
+        height: var(--book-page-height);
+
+        transition: transform var(--book-move-duration);
+    }
+
+    #book {
+
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        z-index: 0;
+    }
+
+    #prev, #next {
+
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        z-index: 1;
+
+        opacity: 0;
+    }
+    #prev {
+
+        left: -100%;
+        display: none;
+    }
+
+    #buton-cuprins {
+
+        position: absolute;
+        top: calc( -1 * var(--buton-cuprins-height) );
+        left: 10px;
+
+        width: var(--buton-cuprins-width);
+        height: var(--buton-cuprins-height);
+
+        transition: left var(--page-flip-duration);
+
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+
+        background-color: var(--color-light-blue);
+        border: 1px solid var(--color-yellow);
+        box-shadow: 1px -1px 0 var(--color-orange);
+        border-bottom: none;
+
+        color: var(--color-yellow);
+
+        font-size: 0.65em;
+    }
+
+    .page {
+
+        display: none;
+
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        perspective: var(--page-flip-perspective);
+
+        transition: z-index 200ms ease;
+        will-change: z-index;
+    }
+    .page.active {
+        display: block;
+    }
+
+    .front,
+    .back {
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        top: 0;
+        left: 0;
+
+        transform-origin: left;
+
+        transition: transform var(--page-flip-duration);
+
+        will-change: transform;
+    }
+
+    .front {
+
+        z-index: 1;
+        backface-visibility: hidden;
+    }
+    .back {
+
+        z-index: 0;
+    }
+
+    .front-content,
+    .back-content {
+
+        width: 100%;
+        height: 100%;
+    }
+    .back-content {
+
+        transform: rotateY(-180deg);
+    }
+
+    .flipped .front,
+    .flipped .back {
+
+        transform: rotateY(-180deg);
+    }
+
+    @media screen and (min-width: 37.5em /* 600px */) and (max-width: 50em /* 800px */) {
+
+        :root {
+
+            #book-wrapper {
+
+                scale: 0.75;
+            }
+        }
+    }
+
+    #book-wrapper-narrow {
+
+        display: none;
+
+        position: relative;
+
+        width: var(--book-page-width);
+        height: var(--book-page-height);
+    }
+
+    #book-narrow {
+
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        top: 0;
+        left: 0;
+
+        z-index: 0;
+    }
+
+    #prev-narrow, #next-narrow {
+
+        position: absolute;
+        top: 0;
+
+        height: 100%;
+        width: 50%;
+
+        opacity: 0;
+
+        z-index: 1;
+    }
+    #prev-narrow { left: 0; }
+    #next-narrow { right: 0; }
+
+    #buton-cuprins-narrow {
+
+        width: var(--buton-cuprins-width);
+        height: var(--buton-cuprins-height);
+
+        position: absolute;
+        left: 10px;
+        top: calc(-1 * var(--buton-cuprins-height));
+
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+
+        background-color: var(--color-light-blue);
+        border: 1px solid var(--color-yellow);
+        box-shadow: 1px -1px 0 var(--color-orange);
+        border-bottom: none;
+
+        color: var(--color-yellow);
+        text-shadow: 1px 1px 0 var(--color-orange);
+
+        font-size: 1em;
+    }
+
+    .content-narrow {
+
+        width: 100%;
+        height: 100%;
+    }
+
+    #book-narrow {
+
+        perspective: var(--page-flip-perspective);
+    }
+    #book-narrow .page {
+        transform-origin: left;
+        transition: transform var(--page-flip-duration), opacity var(--page-flip-duration);
+    }
+    #book-narrow .flipped {
+
+        opacity: 0;
+        transform: rotateY(-180deg);
+    }
+
+    .titlu-cuprins {
+
+        cursor: pointer;
+        z-index: 1;
+    }
+    .cuprins {
+
+        cursor: pointer;
+        z-index: 0;
+    }
+
+    .right-arrow, .left-arrow {
+
+        cursor: pointer;
+
+        position: absolute;
+        bottom: -15%;
+
+        font-size: 3rem;
+        color: var(--color-dark-blue);
+        filter: drop-shadow(1px 0 0 var(--color-light-blue))
+                drop-shadow(-1px 0 0 var(--color-light-blue))
+                drop-shadow(0 1px 0 var(--color-light-blue))
+                drop-shadow(0 -1px 0 var(--color-light-blue));
+
+        z-index: 3;
+
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .right-arrow { right: 20px; }
+    .left-arrow { left: 20px; }
+
+    #book-wrapper, #book-wrapper-narrow { touch-action: manipulation; /* disable double-tap zoom */ }
+
+    @media screen and (max-width: 37.5em /* 600px */) { /* small screen change display mode */
+
+        #book-wrapper { display: none !important; }
+        #book-wrapper-narrow { display: inline !important; }
+        :root {
+            --page-flip-duration: 1.5s;
+
+            --buton-cuprins-width: 150px;
+            --buton-cuprins-height: 30px;
+        }
+    }
+    @media screen and (max-width: 26em /* 416px */) {
+
+        #book-wrapper-narrow { scale: 0.9; }
+    }
+</style>

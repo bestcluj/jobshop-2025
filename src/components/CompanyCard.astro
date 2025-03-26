@@ -6,6 +6,7 @@ const {
     color="blue",
     companySite="",
     forceImgWidth="",
+    onlyRedirect=false
 
 } = Astro.props;
 ---
@@ -16,36 +17,40 @@ const {
         <img src={companyLogo} alt=`logo companie ${companyName}` style=`width: ${forceImgWidth};`>
     </div>
     
-    <!-- <div
-        class="description-bttn"
-        data-lang="en"
-        onclick="
-            close = this.parentElement.hasAttribute('data-description');
-            closeDescriptions();
+    { !onlyRedirect &&
+        <div
+            class="description-bttn"
+            data-lang="en"
+            onclick="
+                close = this.parentElement.hasAttribute('data-description');
+                closeDescriptions();
+    
+                if(!close)
+                    this.parentElement.toggleAttribute('data-description');
+            "
+        >
+            Find more!
+        </div>
+    
+        <div
+            class="description-bttn"
+            data-lang="ro"
+            onclick="
+                close = this.parentElement.hasAttribute('data-description');
+                closeDescriptions();
+    
+                if(!close)
+                    this.parentElement.toggleAttribute('data-description');
+            "
+        >
+            Mai multe!
+        </div>
+    }
 
-            if(!close)
-                this.parentElement.toggleAttribute('data-description');
-        "
-    >
-        Find more!
-    </div>
-
-    <div
-        class="description-bttn"
-        data-lang="ro"
-        onclick="
-            close = this.parentElement.hasAttribute('data-description');
-            closeDescriptions();
-
-            if(!close)
-                this.parentElement.toggleAttribute('data-description');
-        "
-    >
-        Mai multe!
-    </div> -->
-
-    <a href={companySite} target="_blank" data-lang="en" class="description-bttn"> Find more! </a>
-    <a href={companySite} target="_blank" data-lang="ro" class="description-bttn"> Mai multe! </a>
+    { onlyRedirect &&
+        <a href={companySite} target="_blank" data-lang="en" class="description-bttn"> Find more! </a>
+        <a href={companySite} target="_blank" data-lang="ro" class="description-bttn"> Mai multe! </a>
+    }
 
     <div class="description">
         <slot/>
