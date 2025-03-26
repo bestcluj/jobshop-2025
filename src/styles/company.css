@@ -9,7 +9,6 @@
 .company-card a {
   all: unset;
   cursor: pointer;
-  text-decoration: underline #9daad2;
 }
 .company-card .logo {
   height: 200px;
@@ -71,4 +70,10 @@
 }
 .company-card[data-description] .description {
   top: 0;
+}
+.company-card[data-description] div.description-bttn {
+  display: none;
+}
+.company-card:not([data-description]) a.description-bttn {
+  display: none;
 }
