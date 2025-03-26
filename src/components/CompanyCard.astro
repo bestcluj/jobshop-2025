@@ -1,4 +1,5 @@
 ---
+import { discriminatedUnion } from "astro:schema";
 import "../styles/company.css";
 const {
     companyLogo="",
@@ -20,7 +21,6 @@ const {
     { !onlyRedirect &&
         <div
             class="description-bttn"
-            data-lang="en"
             onclick="
                 close = this.parentElement.hasAttribute('data-description');
                 closeDescriptions();
@@ -29,27 +29,21 @@ const {
                     this.parentElement.toggleAttribute('data-description');
             "
         >
-            Find more!
+            <span data-lang="ro"> Mai multe! </span>
+            <span data-lang="en"> Find more! </span>
         </div>
-    
-        <div
-            class="description-bttn"
-            data-lang="ro"
-            onclick="
-                close = this.parentElement.hasAttribute('data-description');
-                closeDescriptions();
-    
-                if(!close)
-                    this.parentElement.toggleAttribute('data-description');
-            "
-        >
-            Mai multe!
-        </div>
+
+        <a href={companySite} target="_blank" class="description-bttn" >
+            <span data-lang="en"> Visit us! </span>
+            <span data-lang="ro"> Vizitează-ne! </span>
+        </a>
     }
 
     { onlyRedirect &&
-        <a href={companySite} target="_blank" data-lang="en" class="description-bttn"> Find more! </a>
-        <a href={companySite} target="_blank" data-lang="ro" class="description-bttn"> Mai multe! </a>
+        <a href={companySite} target="_blank" class="description-bttn" data-force-show>
+            <span data-lang="en"> Visit us! </span>
+            <span data-lang="ro"> Vizitează-ne! </span>
+        </a>
     }
 
     <div class="description">

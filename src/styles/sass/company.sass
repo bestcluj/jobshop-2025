@@ -22,7 +22,6 @@ $card-height: 250px
     a
         all: unset
         cursor: pointer
-        text-decoration: underline $color-blue-transparent-equivalent
 
     overflow: hidden
     position: relative
@@ -45,7 +44,7 @@ $card-height: 250px
             display: block
             width: 90%
 
-    .description-bttn
+    .description-bttn span
 
         all: unset
         cursor: pointer
@@ -107,5 +106,13 @@ $card-height: 250px
     &[data-description]
         .description
             top: 0
+
+        div.description-bttn
+            display: none
+
+    &:not([data-description])
+        a.description-bttn:not([data-force-show])
+            display: none
+        
 
 
