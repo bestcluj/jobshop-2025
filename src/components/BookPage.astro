@@ -1,0 +1,16 @@
+---
+const { pageNumber, frontImg, backImg } = Astro.props;
+---
+
+<div id=`page${pageNumber}` class="page">
+    <div class="front">
+        <div class="front-content">
+            <img data-src=`${frontImg}`>
+        </div>
+    </div>
+    <div class="back">
+        <div class="back-content">
+			<img data-src=`${backImg}` style="position: absolute">
+        </div>
+    </div>
+</div>
