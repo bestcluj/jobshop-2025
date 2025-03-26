@@ -22,7 +22,7 @@
   display: block;
   width: 90%;
 }
-.company-card .description-bttn {
+.company-card .description-bttn span {
   all: unset;
   cursor: pointer;
   display: block;

@@ -20,7 +20,6 @@ const {
     { !onlyRedirect &&
         <div
             class="description-bttn"
-            data-lang="en"
             onclick="
                 close = this.parentElement.hasAttribute('data-description');
                 closeDescriptions();
@@ -29,21 +28,8 @@ const {
                     this.parentElement.toggleAttribute('data-description');
             "
         >
-            Find more!
-        </div>
-    
-        <div
-            class="description-bttn"
-            data-lang="ro"
-            onclick="
-                close = this.parentElement.hasAttribute('data-description');
-                closeDescriptions();
-    
-                if(!close)
-                    this.parentElement.toggleAttribute('data-description');
-            "
-        >
-            Mai multe!
+            <span data-lang="ro"> Mai multe! </span>
+            <span data-lang="en"> Find more! </span>
         </div>
     }
 
