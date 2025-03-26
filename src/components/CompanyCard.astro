@@ -18,24 +18,33 @@ const {
         <img src={companyLogo} alt=`logo companie ${companyName}` style=`width: ${forceImgWidth};`>
     </div>
     
-    <div
-        class="description-bttn"
-        onclick="
-            close = this.parentElement.hasAttribute('data-description');
-            closeDescriptions();
+    { !onlyRedirect &&
+        <div
+            class="description-bttn"
+            onclick="
+                close = this.parentElement.hasAttribute('data-description');
+                closeDescriptions();
+    
+                if(!close)
+                    this.parentElement.toggleAttribute('data-description');
+            "
+        >
+            <span data-lang="ro"> Mai multe! </span>
+            <span data-lang="en"> Find more! </span>
+        </div>
 
-            if(!close)
-                this.parentElement.toggleAttribute('data-description');
-        "
-    >
-        <span data-lang="ro"> Mai multe! </span>
-        <span data-lang="en"> Find more! </span>
-    </div>
+        <a href={companySite} target="_blank" class="description-bttn" >
+            <span data-lang="en"> Visit us! </span>
+            <span data-lang="ro"> Vizitează-ne! </span>
+        </a>
+    }
 
-    <a href={companySite} target="_blank" class="description-bttn">
-        <span data-lang="en"> Visit us! </span>
-        <span data-lang="ro"> Vizitează-ne! </span>
-    </a>
+    { onlyRedirect &&
+        <a href={companySite} target="_blank" class="description-bttn" data-force-show>
+            <span data-lang="en"> Visit us! </span>
+            <span data-lang="ro"> Vizitează-ne! </span>
+        </a>
+    }
 
     <div class="description">
         <slot/>

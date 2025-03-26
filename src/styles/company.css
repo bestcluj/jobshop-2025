@@ -74,6 +74,6 @@
 .company-card[data-description] div.description-bttn {
   display: none;
 }
-.company-card:not([data-description]) a.description-bttn {
+.company-card:not([data-description]) a.description-bttn:not([data-force-show]) {
   display: none;
 }
